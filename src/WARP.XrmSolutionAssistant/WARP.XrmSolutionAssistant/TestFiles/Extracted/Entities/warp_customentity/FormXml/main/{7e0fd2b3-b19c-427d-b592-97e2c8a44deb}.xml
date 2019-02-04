@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms>
+  <systemform>
+    <formid>{7e0fd2b3-b19c-427d-b592-97e2c8a44deb}</formid>
+    <IntroducedVersion>0.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{3ab02475-c5c6-45b0-a415-e8ed07ac3900}" IsUserDefined="1">
+          <labels>
+            <label description="جنرال لواء" languagecode="1025" />
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+            <label description="一般" languagecode="3076" />
+          </labels>
+          <columns>
+            <column width="33%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{2ce9a12b-ba7e-43f3-bb87-e6866e2e5012}">
+                  <labels>
+                    <label description="جنرال لواء" languagecode="1025" />
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                    <label description="一般" languagecode="3076" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7196da29-7fcf-4974-b4e4-1cfd844d4843}">
+                        <labels>
+                          <label description="اسم" languagecode="1025" />
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                          <label description="名称" languagecode="3076" />
+                        </labels>
+                        <control id="warp_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="warp_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5aef18dc-08e6-43ae-b1a8-c456247fb63e}">
+                        <labels>
+                          <label description="صاحب" languagecode="1025" />
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                          <label description="所有者" languagecode="3076" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9a7d9773-4cec-2a86-2e4e-8019541ee5c3}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="سبب الحالة" languagecode="1025" />
+                          <label description="Status Reason" languagecode="1033" />
+                          <label description="Raison du statut" languagecode="1036" />
+                          <label description="状态原因" languagecode="3076" />
+                        </labels>
+                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="{3ab02475-c5c6-45b0-a415-e8ed07ac3900}_section_3" showlabel="false" showbar="false" locklevel="0" id="{91886661-1385-3bc4-3017-b104d0b7adce}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="الجزء" languagecode="1025" />
+                    <label description="Section" languagecode="1033" />
+                    <label description="Section" languagecode="1036" />
+                    <label description="部分" languagecode="3076" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8d753c89-9084-cdb8-e16d-30465531c511}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="منطقية" languagecode="1025" />
+                          <label description="Boolean" languagecode="1033" />
+                          <label description="Booléen" languagecode="1036" />
+                          <label description="布尔" languagecode="3076" />
+                        </labels>
+                        <control id="warp_boolean" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="warp_boolean" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{be3e4dbd-d168-b2a8-900c-96022bc787e2}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="تاريخ الوقت" languagecode="1025" />
+                          <label description="Date Time" languagecode="1033" />
+                          <label description="Date heure" languagecode="1036" />
+                          <label description="约会时间" languagecode="3076" />
+                        </labels>
+                        <control id="warp_datetime" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="warp_datetime" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ee8ae441-e1c4-7cdc-5e33-8bb88b5a34d7}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="مال" languagecode="1025" />
+                          <label description="Money" languagecode="1033" />
+                          <label description="Argent" languagecode="1036" />
+                          <label description="钱" languagecode="3076" />
+                        </labels>
+                        <control id="warp_currency" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="warp_currency" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{904bc10d-7145-c7b7-e88e-1b9115eb5be7}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="دقة" languagecode="1025" />
+                          <label description="Currency" languagecode="1033" />
+                          <label description="Devise" languagecode="1036" />
+                          <label description="货币" languagecode="3076" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bca7c778-385b-e617-1606-02856b3d96c1}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="مبادرة" languagecode="1025" />
+                          <label description="Lead" languagecode="1033" />
+                          <label description="Le parti" languagecode="1036" />
+                          <label description="指南" languagecode="3076" />
+                        </labels>
+                        <control id="warp_lead" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="warp_lead" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a541212c-3a59-aadc-d373-0d8c8398a3ed}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="مجموعة الخيارات" languagecode="1025" />
+                          <label description="Option Set" languagecode="1033" />
+                          <label description="Jeu d'options" languagecode="1036" />
+                          <label description="选项集" languagecode="3076" />
+                        </labels>
+                        <control id="warp_optionset" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="warp_optionset" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e8acdc68-4d93-c99d-9a2d-6d54ba6b030b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="نص" languagecode="1025" />
+                          <label description="Text" languagecode="1033" />
+                          <label description="Texte" languagecode="1036" />
+                          <label description="文本" languagecode="3076" />
+                        </labels>
+                        <control id="warp_text" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="warp_text" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4d5174da-0637-d12c-e0e1-6a961b15b4c9}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="الرقم كاملا" languagecode="1025" />
+                          <label description="Whole Number" languagecode="1033" />
+                          <label description="Nombre entier" languagecode="1036" />
+                          <label description="完整的号码" languagecode="3076" />
+                        </labels>
+                        <control id="warp_wholenumber" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="warp_wholenumber" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eaaa29cb-46c4-e08d-694d-5863321ab318}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="تحديد متعدد" languagecode="1025" />
+                          <label description="Multi Select" languagecode="1033" />
+                          <label description="Sélection multiple" languagecode="1036" />
+                          <label description="多选" languagecode="3076" />
+                        </labels>
+                        <control id="warp_multiselect" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="warp_multiselect" disabled="false" uniqueid="{94024437-1cd1-65d6-9b8b-a373be7e5a59}" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{5665273e-2866-3726-7a9b-ce61b5005ee1}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="متعدد الخط" languagecode="1025" />
+                          <label description="Multi Line" languagecode="1033" />
+                          <label description="Multi ligne" languagecode="1036" />
+                          <label description="多线" languagecode="3076" />
+                        </labels>
+                        <control id="warp_multiline" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="warp_multiline" disabled="false" uniqueid="{bcbe33ed-ecea-1a6e-cac7-166aabe6e9ed}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="66%">
+              <sections>
+                <section showlabel="false" showbar="false" id="{781abcaa-0c5b-4898-91e4-9dd2078a268d}" IsUserDefined="0" height="auto">
+                  <labels>
+                    <label description="ملاحظات" languagecode="1025" />
+                    <label description="Notes" languagecode="1033" />
+                    <label description="Remarques" languagecode="1036" />
+                    <label description="笔记" languagecode="3076" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell showlabel="false" rowspan="15" auto="false" id="{c9b504fd-02e6-4890-bedc-c8c5269c079b}">
+                        <labels>
+                          <label description="ملاحظة النص" languagecode="1025" />
+                          <label description="Note Text" languagecode="1033" />
+                          <label description="Texte de note" languagecode="1036" />
+                          <label description="注意文字" languagecode="3076" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}">
+                          <parameters>
+                            <DefaultTabId>NotesTab</DefaultTabId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row height="auto" />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
