@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>10010</returnedtypecode>
+  <savedqueryid>{9f33db43-33dc-e811-a955-00224801ca18}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="10010" jump="cp_name" select="1" preview="1" icon="1">
+      <row name="result" id="cp_appointmentslotid">
+        <cell name="cp_name" width="150" />
+        <cell name="statuscode" width="100" />
+        <cell name="cp_notavailablereason" width="100" />
+        <cell name="cp_starttime" width="100" />
+        <cell name="cp_endtime" width="100" />
+        <cell name="cp_assessment" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        <cell name="cp_claimant" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        <cell name="cp_provisionalassessment" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        <cell name="cp_venue" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        <cell name="cp_healthprofessional" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        <cell name="cp_bookedon" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+      <entity name="cp_appointmentslot">
+        <attribute name="cp_name" />
+        <attribute name="cp_venue" />
+        <attribute name="statuscode" />
+        <attribute name="cp_starttime" />
+        <attribute name="cp_provisionalassessment" />
+        <attribute name="cp_notavailablereason" />
+        <attribute name="cp_healthprofessional" />
+        <attribute name="cp_endtime" />
+        <attribute name="cp_claimant" />
+        <attribute name="cp_bookedon" />
+        <attribute name="cp_assessment" />
+        <order attribute="cp_starttime" descending="false" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+          <condition attribute="statuscode" operator="eq" value="778230015" />
+        </filter>
+        <attribute name="cp_appointmentslotid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>0.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Removed Session Appointment Slots" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Used as a subgrid on the Session form." languagecode="1033" />
+  </Descriptions>
+</savedquery>

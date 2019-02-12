@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systemform>
+  <formid>{ac76f1d0-37b7-4b34-93c9-1323cf6692c0}</formid>
+  <IntroducedVersion>0.0.0.0</IntroducedVersion>
+  <FormPresentation>1</FormPresentation>
+  <FormActivationState>1</FormActivationState>
+  <form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <tabs>
+      <tab verticallayout="true" id="{ab7d7729-2b26-4de3-ab26-95d581403102}" IsUserDefined="1" name="tab_General" locklevel="0" expanded="true" showlabel="true">
+        <labels>
+          <label description="General" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section showlabel="false" showbar="false" IsUserDefined="0" id="{9fcaf9f2-ed7f-497b-8349-3407977cc59f}" name="sec_General" columns="11" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="General" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{cafb4610-af36-4bb5-ae2d-193d59378bf7}">
+                      <labels>
+                        <label description="Name" languagecode="1033" />
+                      </labels>
+                      <control id="cp_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cp_name" uniqueid="{57302261-82a6-1617-90b3-c97a7b23b08c}" />
+                    </cell>
+                    <cell id="{3798d2d1-1a79-26c9-733c-39590e38ba95}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Lot" languagecode="1033" />
+                      </labels>
+                      <control id="cp_lot" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="cp_lot" disabled="false" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab name="tab_LotWideAudit" id="{55ac615d-1b86-e5d7-93c4-d13e045a8e48}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+        <labels>
+          <label description="Lot Wide Audit" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section name="sec_LotWideAudit" showlabel="false" showbar="false" locklevel="0" id="{2aec4c34-bd27-4ca0-6506-de8b82e6b777}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="250" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="Lot Wide Audit" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{53305a3c-2541-1522-3c24-341648bb4507}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Target for Month" languagecode="1033" />
+                      </labels>
+                      <control id="cp_targetformonth" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_targetformonth" disabled="false" uniqueid="{cce424ec-bc23-d26a-39d3-56ad959d6127}" />
+                    </cell>
+                    <cell id="{b0506418-66ac-c1c0-a2ec-9b25278d1584}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Added to Queue This Month" languagecode="1033" />
+                      </labels>
+                      <control id="cp_queueaddedthismonth" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_queueaddedthismonth" disabled="true" uniqueid="{bdc57d1b-e6ec-4698-d7c2-e6d659714c64}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{c99ed6d2-0251-2c60-e790-03edd0844802}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Today's Target" languagecode="1033" />
+                      </labels>
+                      <control id="cp_targetfortoday" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_targetfortoday" disabled="false" />
+                    </cell>
+                    <cell id="{9e1156c4-2508-c342-ae77-4e2852121c97}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Added to Queue Today" languagecode="1033" />
+                      </labels>
+                      <control id="cp_queueaddedtoday" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_queueaddedtoday" disabled="true" uniqueid="{9da720e4-d291-9b45-1de8-1b887e4b2c7b}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{6ae32177-332d-7e17-48c4-7113852eb447}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Start Hour (0-23)" languagecode="1033" />
+                      </labels>
+                      <control id="cp_starthour" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_starthour" disabled="false" uniqueid="{d6e670b4-6663-1363-6634-49e8e7748446}" />
+                    </cell>
+                    <cell id="{cbc8d9e7-615e-abc3-b9ec-e63c00c1b436}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Current Day" languagecode="1033" />
+                      </labels>
+                      <control id="cp_currentday" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_currentday" disabled="true" uniqueid="{98467a10-103a-2ed3-a38c-b73ce2260336}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{92edb073-6e93-4385-861c-7bee7a92e030}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Exclude SLAs within X Working Days" languagecode="1033" />
+                      </labels>
+                      <control id="cp_slaexcludewithinxworkingdays" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_slaexcludewithinxworkingdays" disabled="false" />
+                    </cell>
+                    <cell id="{1123a54b-3b25-4b24-75ed-2b0991a8ddde}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Current Month" languagecode="1033" />
+                      </labels>
+                      <control id="cp_currentmonth" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_currentmonth" disabled="true" uniqueid="{bcbc00e3-d5e1-aa85-aa8e-ea1161bb2299}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{8cea0943-4155-3786-022d-b2946ad2ad83}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Due Date X Working Days of SLA" languagecode="1033" />
+                      </labels>
+                      <control id="cp_sladuedatexworkingdays" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_sladuedatexworkingdays" disabled="false" />
+                    </cell>
+                    <cell id="{33a65acc-b3a3-0660-16c0-c3d008d3c7e3}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Calculated Daily Target" languagecode="1033" />
+                      </labels>
+                      <control id="cp_calculateddailytarget" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_calculateddailytarget" disabled="true" uniqueid="{1b671137-e718-a5ba-3ade-be6a98453b32}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{4534ec58-3140-02d3-bae0-809120b9e14e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Enable SLA Rule?" languagecode="1033" />
+                      </labels>
+                      <control id="cp_slaenablerule" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_slaenablerule" disabled="false" uniqueid="{db003448-50e2-e3bb-c0d7-49615783e90e}" />
+                    </cell>
+                    <cell id="{7a70abee-605b-8945-747c-1664e938e753}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Calculated Working Days Left in Month" languagecode="1033" />
+                      </labels>
+                      <control id="cp_calculatedworkingdaysleftinmonth" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_calculatedworkingdaysleftinmonth" disabled="true" uniqueid="{e052690b-0805-4179-c0ad-215de8a0b2bd}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{2e778c80-72b5-1eeb-0397-ad601e3ddd91}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Cap TI?" languagecode="1033" />
+                      </labels>
+                      <control id="cp_captienabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_captienabled" disabled="false" />
+                    </cell>
+                    <cell id="{5ee017a5-0140-a2b5-839e-7b366d6825ce}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="TI Selection Probability (%)" languagecode="1033" />
+                      </labels>
+                      <control id="cp_selectionprobabilityti" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="cp_selectionprobabilityti" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{e5cc42a9-4a1c-2e09-cb16-76059e5c1d57}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="TI Cap" languagecode="1033" />
+                      </labels>
+                      <control id="cp_capti" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_capti" disabled="false" />
+                    </cell>
+                    <cell id="{35e47484-8b54-e427-9189-688a6db23610}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="TI Added to Queue Today" languagecode="1033" />
+                      </labels>
+                      <control id="cp_queueaddedtodayti" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_queueaddedtodayti" disabled="true" uniqueid="{95165694-9b29-2484-5cb8-e17bd59a0875}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{c76c4a78-b233-9c58-5e37-4e7aa749d6ed}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Cap PB?" languagecode="1033" />
+                      </labels>
+                      <control id="cp_cappbenabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_cappbenabled" disabled="false" />
+                    </cell>
+                    <cell id="{77edea64-e03c-c18c-7708-01883a0021dc}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Selection Probability (%)" languagecode="1033" />
+                      </labels>
+                      <control id="cp_selectionprobabilitypb" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="cp_selectionprobabilitypb" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{cea8bad5-15a9-7434-57b0-3ddeb9306b7a}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Cap" languagecode="1033" />
+                      </labels>
+                      <control id="cp_cappb" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_cappb" disabled="false" />
+                    </cell>
+                    <cell id="{8a472126-3607-c208-0cae-6e5d0db08bb3}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Added to Queue Today" languagecode="1033" />
+                      </labels>
+                      <control id="cp_queueaddedtodaypb" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_queueaddedtodaypb" disabled="true" uniqueid="{c310aba7-02a7-9868-1b09-3a05e1b5db10}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{5961e945-bd57-13ee-bc58-c45ed90da070}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Cap F2F?" languagecode="1033" />
+                      </labels>
+                      <control id="cp_capf2fenabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_capf2fenabled" disabled="false" uniqueid="{e0db485d-7691-451a-6dc4-ec2ea25e5c35}" />
+                    </cell>
+                    <cell id="{8e4643db-b960-61d9-ed1c-5ec99b36ab81}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Selection Probability (%)" languagecode="1033" />
+                      </labels>
+                      <control id="cp_selectionprobabilityf2f" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="cp_selectionprobabilityf2f" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{5d554e16-d7d3-4ce9-0436-d4c05b7e4006}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Cap" languagecode="1033" />
+                      </labels>
+                      <control id="cp_capf2f" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_capf2f" disabled="false" />
+                    </cell>
+                    <cell id="{ad2ca026-7ce9-cca7-20b8-9a8297b9c4a2}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Added to Queue Today" languagecode="1033" />
+                      </labels>
+                      <control id="cp_queueaddedtodayf2f" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_queueaddedtodayf2f" disabled="true" uniqueid="{5baa4a88-903d-3c80-0b84-b3b8dc351890}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{abd9b7d3-0610-09bc-4d26-3b578db87a65}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Unapproved HP to LWA" languagecode="1033" />
+                      </labels>
+                      <control id="cp_unapprovedhptolwa" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_unapprovedhptolwa" disabled="false" uniqueid="{6cc1ee84-3511-97ea-ddde-0ecc6c4a271a}" />
+                    </cell>
+                    <cell id="{5bb178d0-a274-e391-74a7-83d46b7735b0}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab name="tab_PerformancAudit" id="{520e0002-a29b-d986-883d-6a24d14a1e0d}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+        <labels>
+          <label description="Performance Audit" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section name="sec_PerformanceAudit" showlabel="false" showbar="false" locklevel="0" id="{2d4b8876-b30b-b169-214e-8d70d52ded3e}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="250" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="Performance Audit" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{d262271e-2de1-53de-83d2-ad241ee84a13}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Enable Performance Audit" languagecode="1033" />
+                      </labels>
+                      <control id="cp_enableperformanceauditpbr" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_enableperformanceauditpbr" disabled="false" uniqueid="{8043746d-08d1-ddea-548d-608b2c96b3ce}" />
+                    </cell>
+                    <cell id="{34e97025-c904-8117-e0a1-741e377ae22c}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Enable Performance Audit" languagecode="1033" />
+                      </labels>
+                      <control id="cp_enableperformanceauditf2f" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_enableperformanceauditf2f" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{886472e1-8241-7ed0-4e80-35dd2ac13b68}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Enable SLA Rule" languagecode="1033" />
+                      </labels>
+                      <control id="cp_enableslarulepbr" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_enableslarulepbr" disabled="false" uniqueid="{0e2717d1-1d5c-915a-3e81-a9dda089217a}" />
+                    </cell>
+                    <cell id="{dae7524d-8cbd-dc34-06dd-2a11e99623ec}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Enable SLA Rule" languagecode="1033" />
+                      </labels>
+                      <control id="cp_enableslarulef2f" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_enableslarulef2f" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{b4286dc1-c841-b163-e820-de3a7ebb7044}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Exclude from Performance Audit within X days" languagecode="1033" />
+                      </labels>
+                      <control id="cp_slaexcludefromperformanceauditwithinxdpbr" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_slaexcludefromperformanceauditwithinxdpbr" disabled="false" uniqueid="{642b4536-5541-a442-4e63-6556324e583a}" />
+                    </cell>
+                    <cell id="{4ca6d39e-0e64-ad53-798d-5be4a0624d15}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Exclude from Performance Audit within X days" languagecode="1033" />
+                      </labels>
+                      <control id="cp_slaexcludefromperformanceauditwithinxdf2f" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_slaexcludefromperformanceauditwithinxdf2f" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{b5671570-abaa-61db-555a-4ec302cd7e91}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="PB Due Date X Working Days Before SLA" languagecode="1033" />
+                      </labels>
+                      <control id="cp_sladuedatexworkingdayspbr" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_sladuedatexworkingdayspbr" disabled="false" uniqueid="{ed6e9c35-057e-bc6e-4118-849220e8105e}" />
+                    </cell>
+                    <cell id="{753e07a1-9ab0-9e2c-eb14-e8eb5373282e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="F2F Due Date X Working Days Before SLA" languagecode="1033" />
+                      </labels>
+                      <control id="cp_sladuedatexworkingdaysf2f" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="cp_sladuedatexworkingdaysf2f" disabled="false" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab name="tab_TriageRules" id="{1598aa0e-5a30-dd8e-2977-034ec3d0e2c8}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+        <labels>
+          <label description="Triage Rules" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section name="sec_DescriptorRules" showlabel="false" showbar="false" locklevel="0" id="{ad6bc2a1-6ca5-53dd-ac7c-8c6847799d6a}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="Section" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{e21d2288-bba2-4ba9-c96e-42d54821d146}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Enabled?" languagecode="1033" />
+                      </labels>
+                      <control id="cp_descriptorbasedenabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="cp_descriptorbasedenabled" disabled="false" uniqueid="{625531a5-465e-d8d4-dc92-1379c4981dc4}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{02b6c30a-7c40-66c0-7ee4-282dbc12315d}" showlabel="false" auto="false" rowspan="6" colspan="1">
+                      <labels>
+                        <label description="Descriptor Rules" languagecode="1033" />
+                      </labels>
+                      <control id="grd_DescriptorRules" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{15bdb286-0e16-485b-9368-6e7a9579ce76}">
+                        <parameters>
+                          <ViewId>{1950459B-0AA5-41B4-888E-C691BC414536}</ViewId>
+                          <IsUserView>false</IsUserView>
+                          <RelationshipName>cp_cp_auditconfigurationsetting_cp_descripto</RelationshipName>
+                          <TargetEntityType>cp_descriptorrules</TargetEntityType>
+                          <AutoExpand>Fixed</AutoExpand>
+                          <EnableQuickFind>false</EnableQuickFind>
+                          <EnableViewPicker>false</EnableViewPicker>
+                          <ViewIds>{1950459B-0AA5-41B4-888E-C691BC414536}</ViewIds>
+                          <EnableJumpBar>false</EnableJumpBar>
+                          <ChartGridMode>All</ChartGridMode>
+                          <VisualizationId />
+                          <IsUserChart>false</IsUserChart>
+                          <EnableChartPicker>true</EnableChartPicker>
+                          <RecordsPerPage>4</RecordsPerPage>
+                          <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab name="tab_System" id="{b81ae238-23c1-6e8b-2d8a-bc9c6dd8b789}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false">
+        <labels>
+          <label description="System" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section name="sec_System" showlabel="false" showbar="false" locklevel="0" id="{553e1904-b16b-95ca-9b1c-2be4488989a4}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="System" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{0d2100a6-56eb-531d-2ea3-287518a40edb}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Owner" languagecode="1033" />
+                      </labels>
+                      <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                    </cell>
+                    <cell id="{ce6c0851-d36e-7ebb-4ee7-69011944d86c}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+    </tabs>
+    <footer id="{63e9c7fa-4cab-4044-9648-b64b0bfb59b9}" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+      <rows>
+        <row>
+          <cell id="{3ad2a599-744b-8027-47d2-8b97681e5c29}" showlabel="true" locklevel="0">
+            <labels>
+              <label description="Modified On" languagecode="1033" />
+            </labels>
+            <control id="footer_modifiedon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="modifiedon" disabled="true" />
+          </cell>
+          <cell id="{b7993dbd-0193-65b5-1dae-663696bcc18a}" showlabel="true" locklevel="0">
+            <labels>
+              <label description="Modified By" languagecode="1033" />
+            </labels>
+            <control id="footer_modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedby" disabled="true" />
+          </cell>
+        </row>
+      </rows>
+    </footer>
+    <Navigation>
+      <NavBar>
+        <NavBarByRelationshipItem RelationshipName="cp_cp_auditconfigurationsetting_cp_descripto" Id="nav_cp_cp_auditconfigurationsetting_cp_descripto" Show="false" Sequence="9601" Area="Info">
+          <Titles>
+            <Title LCID="1033" Text="Descriptor Rules" />
+          </Titles>
+        </NavBarByRelationshipItem>
+      </NavBar>
+      <NavBarAreas>
+        <NavBarArea Id="Info">
+          <Titles>
+            <Title LCID="1033" Text="Common" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Sales">
+          <Titles>
+            <Title LCID="1033" Text="Sales" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Service">
+          <Titles>
+            <Title LCID="1033" Text="Service" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Marketing">
+          <Titles>
+            <Title LCID="1033" Text="Marketing" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="ProcessCenter">
+          <Titles>
+            <Title LCID="1033" Text="Process Sessions" />
+          </Titles>
+        </NavBarArea>
+      </NavBarAreas>
+    </Navigation>
+    <controlDescriptions />
+    <formLibraries>
+      <Library name="cp_/scripts/dg.xrmquery.web.promise.min.js" libraryUniqueId="{9109510a-5c0c-e569-a436-b464ee4da492}" />
+      <Library name="cp_/scripts/phoenixCommon.js" libraryUniqueId="{83e0be46-26ac-aa8a-1767-0529080ce13d}" />
+      <Library name="cp_/scripts/auditConfigurationSettingForm.js" libraryUniqueId="{8831a704-4847-a826-7446-bc26a3ed77e0}" />
+    </formLibraries>
+    <events>
+      <event name="onload" application="false" active="false">
+        <Handlers>
+          <Handler functionName="Phoenix.AuditConfigurationSettingForm.formOnLoad" libraryName="cp_/scripts/auditConfigurationSettingForm.js" handlerUniqueId="{b2e39d42-eac8-26c6-4014-310ebac3b3d0}" enabled="true" parameters="" passExecutionContext="false" />
+        </Handlers>
+      </event>
+      <event name="onchange" application="false" active="false" attribute="cp_targetformonth">
+        <Handlers>
+          <Handler functionName="Phoenix.AuditConfigurationSettingForm.targetForMonthOnChange" libraryName="cp_/scripts/auditConfigurationSettingForm.js" handlerUniqueId="{cc3d00d3-6dba-9937-3c62-42a677205505}" enabled="true" parameters="" passExecutionContext="false" />
+        </Handlers>
+      </event>
+    </events>
+  </form>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <LocalizedNames>
+    <LocalizedName description="Audit Config Setting" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="A form for this entity." languagecode="1033" />
+  </Descriptions>
+</systemform>

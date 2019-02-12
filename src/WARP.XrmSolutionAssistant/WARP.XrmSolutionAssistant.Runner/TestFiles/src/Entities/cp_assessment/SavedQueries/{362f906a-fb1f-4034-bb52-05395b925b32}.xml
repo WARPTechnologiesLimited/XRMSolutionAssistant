@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <isquickfindquery>1</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>10011</returnedtypecode>
+  <savedqueryid>{362f906a-fb1f-4034-bb52-05395b925b32}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="10011" jump="cp_name" select="1" icon="1" preview="1">
+      <row name="result" id="cp_assessmentid">
+        <cell name="cp_name" width="300" />
+        <cell name="statuscode" width="100" />
+        <cell name="a_d7a28799cd5ce811a94f00224801ca18.cp_referraltype" width="100" disableSorting="1" />
+        <cell name="cp_assessmentprocesstype" width="100" />
+        <cell name="cp_claimantfullname" width="100" />
+        <cell name="cp_assessmenttool" width="100" />
+        <cell name="cp_referral" width="100" />
+        <cell name="cp_sladuedate" width="100" />
+        <cell name="createdon" width="125" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>4</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+      <entity name="cp_assessment">
+        <attribute name="cp_name" />
+        <attribute name="createdon" />
+        <order attribute="cp_name" descending="true" />
+        <attribute name="statuscode" />
+        <link-entity alias="a_d7a28799cd5ce811a94f00224801ca18" name="cp_referral" from="cp_referralid" to="cp_referral" link-type="outer" visible="false">
+          <attribute name="cp_referraltype" />
+        </link-entity>
+        <attribute name="cp_sladuedate" />
+        <attribute name="cp_referral" />
+        <attribute name="cp_claimantfullname" />
+        <attribute name="cp_assessmenttool" />
+        <attribute name="cp_assessmentprocesstype" />
+        <filter type="or" isquickfindfields="1">
+          <condition attribute="cp_referral" operator="like" value="{0}" />
+          <condition attribute="cp_claimantfullname" operator="like" value="{0}" />
+          <condition attribute="cp_name" operator="like" value="{0}" />
+        </filter>
+        <attribute name="cp_assessmentid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>201710.1629</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Quick Find Assessments" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

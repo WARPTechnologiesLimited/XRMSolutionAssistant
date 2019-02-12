@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{ab582fb0-a846-453e-ad88-77f75ce91264}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="fullname" select="1" icon="1" preview="1">
+      <row name="result" id="contactid">
+        <cell name="fullname" width="300" />
+        <cell name="emailaddress1" width="150" />
+        <cell name="parentcustomerid" width="150" />
+        <cell name="telephone1" width="125" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+      <entity name="contact">
+        <attribute name="fullname" />
+        <order attribute="fullname" descending="false" />
+        <attribute name="parentcustomerid" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <link-entity name="connection" from="record2id" to="contactid" alias="MyConnections">
+          <filter type="and">
+            <condition attribute="record1id" operator="eq-userid" />
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </link-entity>
+        <attribute name="telephone1" />
+        <attribute name="emailaddress1" />
+        <attribute name="contactid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>5.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="My Connections" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Shows all active instances of the contact that the current user is connected to via an active connection." languagecode="1033" />
+  </Descriptions>
+</savedquery>

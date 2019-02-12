@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{9818766e-7172-4d59-9279-013835c3decd}</savedqueryid>
+  <queryapi>List.RetrieveContactsNotPlacedOrders</queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="fullname" select="1" icon="1" preview="1">
+      <row name="result" id="contactid">
+        <cell name="fullname" width="300" />
+        <cell name="parentcustomerid" width="150" />
+        <cell name="telephone1" width="125" />
+      </row>
+    </grid>
+  </layoutxml>
+  <columnsetxml>
+    <columnset version="3.0">
+      <column>contactid</column>
+      <column>fullname</column>
+      <column>parentcustomerid</column>
+      <column>telephone1</column>
+      <ascend>fullname</ascend>
+    </columnset>
+  </columnsetxml>
+  <querytype>0</querytype>
+  <IntroducedVersion>5.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Contacts: No Orders in Last 6 Months" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

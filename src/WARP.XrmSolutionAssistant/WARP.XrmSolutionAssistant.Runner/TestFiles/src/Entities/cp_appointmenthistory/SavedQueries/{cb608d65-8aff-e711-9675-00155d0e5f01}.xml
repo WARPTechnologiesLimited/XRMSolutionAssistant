@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>10009</returnedtypecode>
+  <savedqueryid>{cb608d65-8aff-e711-9675-00155d0e5f01}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" icon="1" preview="1" select="1" jump="cp_name" object="10009">
+      <row id="cp_appointmenthistoryid" name="result">
+        <cell name="cp_name" width="100" />
+        <cell name="statuscode" width="125" imageproviderwebresource="$webresource:" imageproviderfunctionname="" />
+        <cell name="cp_notavailablereason" width="100" />
+        <cell name="cp_starttime" width="100" />
+        <cell name="cp_endtime" width="100" />
+        <cell name="cp_assessment" width="100" />
+        <cell name="cp_claimant" width="100" />
+        <cell name="cp_venue" width="100" />
+        <cell name="cp_hp" width="100" />
+        <cell name="cp_bookedon" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch mapping="logical" output-format="xml-platform" version="1.0">
+      <entity name="cp_appointmenthistory">
+        <order descending="false" attribute="cp_starttime" />
+        <attribute name="statuscode" />
+        <attribute name="cp_starttime" />
+        <attribute name="cp_name" />
+        <attribute name="cp_notavailablereason" />
+        <attribute name="cp_endtime" />
+        <attribute name="cp_assessment" />
+        <attribute name="cp_claimant" />
+        <attribute name="cp_venue" />
+        <attribute name="cp_hp" />
+        <attribute name="cp_bookedon" />
+        <attribute name="cp_appointmenthistoryid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Assessment Appointment Histories" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Used by a subgrid on the Assessment form." languagecode="1033" />
+  </Descriptions>
+</savedquery>

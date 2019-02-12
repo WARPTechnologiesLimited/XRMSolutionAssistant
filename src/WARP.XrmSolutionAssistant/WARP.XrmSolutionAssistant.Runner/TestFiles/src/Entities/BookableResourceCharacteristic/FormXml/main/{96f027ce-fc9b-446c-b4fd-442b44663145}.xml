@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systemform>
+  <formid>{96f027ce-fc9b-446c-b4fd-442b44663145}</formid>
+  <IntroducedVersion>8.1.0.0</IntroducedVersion>
+  <FormPresentation>1</FormPresentation>
+  <FormActivationState>1</FormActivationState>
+  <form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <tabs>
+      <tab verticallayout="true" id="{53ebdef5-5a45-4064-87d0-23d0d36d8b67}" IsUserDefined="1">
+        <labels>
+          <label description="General" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="33%">
+            <sections>
+              <section showlabel="false" showbar="false" IsUserDefined="0" id="{6f78f2be-845d-4fe7-b06f-3775c8cd17f9}">
+                <labels>
+                  <label description="General" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{b5e0251f-83a2-4741-8a96-3e43d68e981a}" showlabel="true" locklevel="0" visible="false">
+                      <labels>
+                        <label description="Name" languagecode="1033" />
+                      </labels>
+                      <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{c85a4bb7-d3ea-1655-bc3e-39a7c39a88b0}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Characteristic" languagecode="1033" />
+                      </labels>
+                      <control id="characteristic" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="characteristic" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{5b5a1329-97c8-4c26-1462-0790c6e42939}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Rating Value" languagecode="1033" />
+                      </labels>
+                      <control id="ratingvalue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ratingvalue" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{515ec105-e6d5-56d1-19ed-d8ecd6816228}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Resource" languagecode="1033" />
+                      </labels>
+                      <control id="resource" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="resource" disabled="false" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+          <column width="66%">
+            <sections>
+              <section showlabel="false" showbar="false" id="{0356f1a8-b3a3-4d8c-a743-e6116e3d6d03}" IsUserDefined="0" height="auto">
+                <labels>
+                  <label description="Notes" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell showlabel="false" rowspan="15" auto="false" id="{809f024a-6f1c-4d47-96ca-20ca2e02ca7c}">
+                      <labels>
+                        <label description="Note Text" languagecode="1033" />
+                      </labels>
+                      <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}">
+                        <parameters>
+                          <DefaultTabId>NotesTab</DefaultTabId>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row height="auto" />
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+    </tabs>
+    <Navigation>
+      <NavBar></NavBar>
+      <NavBarAreas>
+        <NavBarArea Id="Info">
+          <Titles>
+            <Title LCID="1033" Text="Common" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Sales">
+          <Titles>
+            <Title LCID="1033" Text="Sales" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Service">
+          <Titles>
+            <Title LCID="1033" Text="Service" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Marketing">
+          <Titles>
+            <Title LCID="1033" Text="Marketing" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="ProcessCenter">
+          <Titles>
+            <Title LCID="1033" Text="Process Sessions" />
+          </Titles>
+        </NavBarArea>
+      </NavBarAreas>
+    </Navigation>
+  </form>
+  <LocalizedNames>
+    <LocalizedName description="Information" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="A form for this entity." languagecode="1033" />
+  </Descriptions>
+</systemform>

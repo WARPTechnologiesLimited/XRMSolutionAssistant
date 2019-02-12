@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{927e6cd8-b3ed-4c20-a154-b8bd8a86d172}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="fullname" select="1" icon="1" preview="1">
+      <row name="result" id="contactid">
+        <cell name="fullname" width="300" />
+        <cell name="lastusedincampaign" width="150" />
+        <cell name="telephone1" width="100" />
+        <cell name="address1_city" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical">
+      <entity name="contact">
+        <attribute name="contactid" />
+        <attribute name="fullname" />
+        <attribute name="lastusedincampaign" />
+        <attribute name="telephone1" />
+        <attribute name="address1_city" />
+        <order attribute="fullname" descending="false" />
+        <filter type="or">
+          <condition attribute="lastusedincampaign" operator="olderthan-x-months" value="3" />
+          <condition attribute="lastusedincampaign" operator="null" />
+        </filter>
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>5.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Contacts: No Campaign Activities in Last 3 Months" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

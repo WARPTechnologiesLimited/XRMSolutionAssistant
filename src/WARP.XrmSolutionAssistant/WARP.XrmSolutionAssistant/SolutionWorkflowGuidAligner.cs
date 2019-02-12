@@ -8,6 +8,7 @@ namespace WARP.XrmSolutionAssistant
     using System.IO;
     using System.Security.Cryptography;
     using System.Text;
+    using System.Text.RegularExpressions;
 
     using NLog;
 
@@ -26,7 +27,7 @@ namespace WARP.XrmSolutionAssistant
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionWorkflowGuidAligner"/> class.
         /// </summary>
-        /// <param name="solutionRootDirectory">Directory containing the </param>
+        /// <param name="solutionRootDirectory">Path to the directory containing the extracted solution.</param>
         public SolutionWorkflowGuidAligner(string solutionRootDirectory)
         {
             this.solutionRootDirectory = solutionRootDirectory;
@@ -47,11 +48,53 @@ namespace WARP.XrmSolutionAssistant
 
             try
             {
-                throw new NotImplementedException();
+                var workflowsDir = Path.Combine(this.solutionRootDirectory, "Workflows");
+
+                var xamlPaths = Directory.GetFiles(workflowsDir, "*.xaml");
+
+                foreach (var xamlPath in xamlPaths)
+                {
+                    var xamlFileName = Path.GetFileNameWithoutExtension(xamlPath);
+                    Logger.Info("Working on: {0}", xamlFileName);
+                    var xamlContents = File.ReadAllText(xamlPath);
+                    const string SearchPattern = "(?<=<Variable x:TypeArguments=\"x:String\" Default=\")([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})";
+                    var defaultGuidRegex = Regex.Match(xamlContents, SearchPattern, RegexOptions.Multiline | RegexOptions.IgnoreCase);
+
+                    if (!defaultGuidRegex.Success)
+                    {
+                        // Couldn't find the correct pattern
+                        Logger.Info("Couldn't find Default Guid tag for Workflow {0}.", xamlFileName);
+                        continue;
+                    }
+
+                    var oldGuidString = defaultGuidRegex.Groups[1].Value;
+                    if (!Guid.TryParse(oldGuidString, out var parsedGuid))
+                    {
+                        Logger.Warn("Returned Guid string is not a Guid: {0}", oldGuidString);
+                        continue;
+                    }
+
+                    Logger.Trace("Old Guid: {0}", oldGuidString);
+                    var newGuid = StringToGuid(xamlFileName);
+
+                    if (string.Equals(oldGuidString, newGuid.ToString("D"), StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        Logger.Info("Guids match. Skipping.");
+                        continue;
+                    }
+
+                    xamlContents = xamlContents.Replace(oldGuidString, newGuid.ToString("D"));
+
+                    var streamWriter = new StreamWriter(xamlPath, false, new UTF8Encoding(true));
+                    streamWriter.Write(xamlContents);
+                    streamWriter.Close();
+                }
+
+                Logger.Info("Finished.");
             }
             catch (Exception ex)
             {
-                Logger.Error(ex, "Unexpected error: {0}", ex.Message);
+                Logger.Fatal(ex, "Unexpected error: {0}", ex.Message);
             }
             finally
             {
@@ -59,7 +102,7 @@ namespace WARP.XrmSolutionAssistant
             }
         }
 
-        private static Guid StringToGUID(string value)
+        private static Guid StringToGuid(string value)
         {
             Logger.Trace("String to GUID called for: {0}", value);
 

@@ -2,6 +2,7 @@
 // Copyright © WARP Technologies Limited
 // </copyright>
 
+// ReSharper disable PossibleMultipleEnumeration
 namespace WARP.XrmSolutionAssistant.Workers
 {
     using System.Linq;
@@ -44,7 +45,7 @@ namespace WARP.XrmSolutionAssistant.Workers
                     {
                         // Only sort elements that have the required attribute
                         var elementsToSort = x.Elements().Where(el => el.Attribute(attributeToSort) != null);
-                        var sorted = elementsToSort.OrderBy(s => s.Attribute(attributeToSort).Value).ToList();
+                        var sorted = elementsToSort.OrderBy(s => s.Attribute(attributeToSort)?.Value).ToList();
                         elementsToSort.Remove();
                         foreach (var element in sorted)
                         {
@@ -65,16 +66,18 @@ namespace WARP.XrmSolutionAssistant.Workers
             const string KeyName = "key";
 
             var md = doc.Descendants(MissingDependencyLabel);
-            if (md.Any())
+            if (!md.Any())
             {
-                var missingDependenciesContainer = md.FirstOrDefault()?.Parent;
-                var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(KeyName)?.Value)
-                    .ThenBy(d => d.Element(DependentName)?.Attribute(KeyName)?.Value).ToList();
-                md.Remove();
-                foreach (var dependencyElement in sorted)
-                {
-                    missingDependenciesContainer?.Add(dependencyElement);
-                }
+                return;
+            }
+
+            var missingDependenciesContainer = md.FirstOrDefault()?.Parent;
+            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(KeyName)?.Value)
+                .ThenBy(d => d.Element(DependentName)?.Attribute(KeyName)?.Value).ToList();
+            md.Remove();
+            foreach (var dependencyElement in sorted)
+            {
+                missingDependenciesContainer?.Add(dependencyElement);
             }
         }
     }

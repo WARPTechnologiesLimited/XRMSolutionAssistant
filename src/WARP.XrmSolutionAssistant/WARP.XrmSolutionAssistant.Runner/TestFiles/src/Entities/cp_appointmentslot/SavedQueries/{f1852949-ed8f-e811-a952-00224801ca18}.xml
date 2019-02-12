@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>10010</returnedtypecode>
+  <savedqueryid>{f1852949-ed8f-e811-a952-00224801ca18}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="10010" jump="cp_name" select="1" preview="1" icon="1">
+      <row name="result" id="cp_appointmentslotid">
+        <cell name="cp_name" width="150" />
+        <cell name="cp_lot" width="100" />
+        <cell name="statuscode" width="100" />
+        <cell name="cp_starttime" width="100" />
+        <cell name="cp_venue" width="100" />
+        <cell name="cp_healthprofessional" width="100" />
+        <cell name="a_6644b7d9728ee811a95200224801ca18.cp_manager" width="100" disableSorting="1" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+      <entity name="cp_appointmentslot">
+        <attribute name="cp_name" />
+        <order attribute="cp_name" descending="false" />
+        <filter type="and">
+          <condition attribute="statuscode" operator="eq" value="778230003" />
+        </filter>
+        <link-entity name="cp_referral" from="cp_referralid" to="cp_referral" alias="aa">
+          <filter type="and">
+            <condition attribute="cp_referraltype" operator="eq" uiname="Rework" uitype="cp_referraltype" value="{CABBD856-1CD5-E711-966A-00155D0E5F01}" />
+          </filter>
+        </link-entity>
+        <link-entity alias="a_6644b7d9728ee811a95200224801ca18" name="bookableresource" from="bookableresourceid" to="cp_healthprofessional" link-type="outer" visible="false">
+          <attribute name="cp_manager" />
+        </link-entity>
+        <attribute name="cp_venue" />
+        <attribute name="statuscode" />
+        <attribute name="cp_starttime" />
+        <attribute name="cp_lot" />
+        <attribute name="cp_healthprofessional" />
+        <attribute name="cp_appointmentslotid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description=".ADV Escalations - Rework Cases with Booked Appointment" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

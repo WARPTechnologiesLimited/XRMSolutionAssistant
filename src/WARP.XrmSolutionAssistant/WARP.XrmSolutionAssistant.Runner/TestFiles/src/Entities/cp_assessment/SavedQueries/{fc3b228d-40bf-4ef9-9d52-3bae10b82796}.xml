@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>10011</returnedtypecode>
+  <savedqueryid>{fc3b228d-40bf-4ef9-9d52-3bae10b82796}</savedqueryid>
+  <layoutxml>
+    <grid name="" object="10011" jump="cp_name" select="1" icon="1" preview="1">
+      <row name="cp_assessment" id="cp_assessmentid">
+        <cell name="cp_name" width="300" />
+        <cell name="statuscode" width="100" />
+        <cell name="statecode" width="100" />
+        <cell name="cp_assessmentprocesstype" width="100" />
+        <cell name="cp_assessmenttool" width="100" />
+        <cell name="cp_sladuedate" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>2</querytype>
+  <fetchxml>
+    <fetch version="1.0" mapping="logical">
+      <entity name="cp_assessment">
+        <attribute name="cp_name" />
+        <order attribute="cp_name" descending="true" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <attribute name="statuscode" />
+        <attribute name="statecode" />
+        <attribute name="cp_sladuedate" />
+        <attribute name="cp_assessmenttool" />
+        <attribute name="cp_assessmentprocesstype" />
+        <attribute name="cp_assessmentid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>201710.1629</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Assessment Associated View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

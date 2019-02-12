@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>1141</returnedtypecode>
+  <savedqueryid>{3434ddf5-95f1-4807-a923-870c0aa6660c}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="1141" jump="name" select="1" icon="1" preview="1">
+      <row name="result" id="characteristicid">
+        <cell name="name" width="150" />
+        <cell name="characteristictype" width="150" />
+        <cell name="description" width="200" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" mapping="logical">
+      <entity name="characteristic">
+        <attribute name="name" />
+        <order attribute="name" descending="false" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <attribute name="description" />
+        <attribute name="characteristictype" />
+        <attribute name="characteristicid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>8.1.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Active Characteristics" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

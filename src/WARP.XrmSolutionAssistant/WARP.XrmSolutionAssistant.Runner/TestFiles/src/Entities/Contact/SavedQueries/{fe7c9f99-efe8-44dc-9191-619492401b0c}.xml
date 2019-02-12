@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{fe7c9f99-efe8-44dc-9191-619492401b0c}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="firstname" select="1" preview="1" icon="1">
+      <row name="result" id="contactid">
+        <cell name="firstname" />
+        <cell name="lastname" />
+        <cell name="parentcustomerid" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>32768</querytype>
+  <IntroducedVersion>7.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Contacts Mobile Client Draft View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

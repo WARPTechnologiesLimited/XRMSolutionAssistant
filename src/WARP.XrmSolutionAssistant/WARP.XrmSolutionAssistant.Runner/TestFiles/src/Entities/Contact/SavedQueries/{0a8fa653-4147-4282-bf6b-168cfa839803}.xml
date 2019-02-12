@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{0a8fa653-4147-4282-bf6b-168cfa839803}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="fullname" select="1" icon="1" preview="1">
+      <row name="result" id="contactid">
+        <cell name="fullname" width="300" />
+        <cell name="emailaddress1" width="150" />
+        <cell name="parentcustomerid" width="150" />
+        <cell name="telephone1" width="125" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+      <entity name="contact">
+        <attribute name="fullname" />
+        <order attribute="fullname" descending="false" />
+        <attribute name="parentcustomerid" />
+        <link-entity name="connection" from="record2id" to="contactid" alias="DealInfluencer">
+          <filter type="and">
+            <condition attribute="record2roleid" operator="eq" value="A061872D-07CF-4de7-8ED0-EF79A55F1A94" />
+          </filter>
+          <link-entity name="opportunity" from="opportunityid" to="record1id" alias="DealInfluenced">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="1" />
+              <condition attribute="actualclosedate" operator="last-x-months" value="12" />
+            </filter>
+          </link-entity>
+        </link-entity>
+        <attribute name="telephone1" />
+        <attribute name="emailaddress1" />
+        <attribute name="contactid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>5.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Contacts: Influenced Deals That We Won" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Key contacts who influenced deals that have been won in the last 12 months." languagecode="1033" />
+  </Descriptions>
+</savedquery>

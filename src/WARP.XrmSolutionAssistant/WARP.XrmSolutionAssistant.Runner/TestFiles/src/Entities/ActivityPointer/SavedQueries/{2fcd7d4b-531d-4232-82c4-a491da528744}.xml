@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>4200</returnedtypecode>
+  <savedqueryid>{2fcd7d4b-531d-4232-82c4-a491da528744}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="4200" jump="subject" select="1" preview="0" icon="1">
+      <row name="result" id="activityid" multiobjectidfield="activitytypecode">
+        <cell name="subject" width="300" />
+        <cell name="statecode" width="100" />
+        <cell name="activitytypecode" width="110" />
+        <cell name="scheduledend" width="100" />
+        <cell name="regardingobjectid" width="100" />
+        <cell name="createdon" width="100" />
+        <cell name="instancetypecode" ishidden="1" width="100" />
+        <cell name="community" ishidden="1" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>64</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+      <entity name="activitypointer">
+        <attribute name="subject" />
+        <attribute name="activitytypecode" />
+        <attribute name="activityid" />
+        <attribute name="instancetypecode" />
+        <order attribute="createdon" descending="true" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <attribute name="statecode" />
+        <attribute name="regardingobjectid" />
+        <attribute name="scheduledend" />
+        <attribute name="createdon" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>5.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Activities Lookup View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

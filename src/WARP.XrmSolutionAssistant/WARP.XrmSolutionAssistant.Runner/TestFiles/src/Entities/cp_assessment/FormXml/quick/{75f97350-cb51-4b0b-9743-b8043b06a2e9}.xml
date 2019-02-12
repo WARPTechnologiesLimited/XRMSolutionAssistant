@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systemform>
+  <formid>{75f97350-cb51-4b0b-9743-b8043b06a2e9}</formid>
+  <IntroducedVersion>0.1.3.65</IntroducedVersion>
+  <FormPresentation>1</FormPresentation>
+  <FormActivationState>1</FormActivationState>
+  <form maxWidth="400">
+    <tabs>
+      <tab id="{fd68b73a-64b5-4a48-be13-3beea9a7adf2}" name="tabDetails" showlabel="false" locklevel="0" expanded="true">
+        <labels>
+          <label description="Details" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{342b2de9-411e-4a79-b69a-cad9d783b154}" name="sectionDetails" columns="1" showlabel="false" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="Details" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{414cacab-d3e4-428d-7233-e909dd87491a}" showlabel="false" colspan="1" auto="false" rowspan="6">
+                      <labels>
+                        <label description="Reports" languagecode="1033" />
+                      </labels>
+                      <control id="gridReports" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{945a69b1-cb1a-8cde-755e-6ca30859e5eb}">
+                        <parameters>
+                          <ViewId>{04A48CB1-0631-E811-A94C-00224801CA18}</ViewId>
+                          <IsUserView>false</IsUserView>
+                          <RelationshipName>cp_assessment_cp_assessmentreport_Assessment</RelationshipName>
+                          <TargetEntityType>cp_assessmentreport</TargetEntityType>
+                          <AutoExpand>Fixed</AutoExpand>
+                          <EnableQuickFind>false</EnableQuickFind>
+                          <EnableViewPicker>false</EnableViewPicker>
+                          <ViewIds>{F3F18ED2-4731-4FBC-A3CE-38F1A786B177},{04A48CB1-0631-E811-A94C-00224801CA18}</ViewIds>
+                          <EnableJumpBar>false</EnableJumpBar>
+                          <ChartGridMode>All</ChartGridMode>
+                          <VisualizationId />
+                          <IsUserChart>false</IsUserChart>
+                          <EnableChartPicker>true</EnableChartPicker>
+                          <RecordsPerPage>4</RecordsPerPage>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                  <row />
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+    </tabs>
+    <DisplayConditions Order="3">
+      <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+      <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+    </DisplayConditions>
+  </form>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <LocalizedNames>
+    <LocalizedName description="Other Reports for Referral Closure Review" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Other reports for the Referral Closure Review form." languagecode="1033" />
+  </Descriptions>
+</systemform>

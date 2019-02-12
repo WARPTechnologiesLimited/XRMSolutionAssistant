@@ -30,6 +30,9 @@ namespace WARP.XrmSolutionAssistant.Runner
             var workflowGuidAligner = new SolutionWorkflowGuidAligner(rootDirectory);
             workflowGuidAligner.Execute();
 
+            var solutionVersionResetter = new SolutionVersionReset(rootDirectory);
+            solutionVersionResetter.Execute();
+
             Console.WriteLine();
             Console.WriteLine("Complete. Press any key to close.");
             Console.ReadKey();

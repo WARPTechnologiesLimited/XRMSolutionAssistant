@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>1150</returnedtypecode>
+  <savedqueryid>{32219bb2-72d1-4879-a864-b05f7ba21d3d}</savedqueryid>
+  <layoutxml>
+    <grid name="" object="1150" jump="name" select="1" icon="1" preview="1">
+      <row name="bookableresource" id="bookableresourceid">
+        <cell name="name" width="300" />
+        <cell name="cp_typeofemployment" width="100" />
+        <cell name="cp_resourcecategory" width="100" />
+        <cell name="cp_manager" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>2</querytype>
+  <fetchxml>
+    <fetch version="1.0" mapping="logical">
+      <entity name="bookableresource">
+        <attribute name="name" />
+        <order attribute="name" descending="false" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <attribute name="cp_typeofemployment" />
+        <attribute name="cp_resourcecategory" />
+        <attribute name="cp_manager" />
+        <attribute name="bookableresourceid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>8.1.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Bookable Resource Associated View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

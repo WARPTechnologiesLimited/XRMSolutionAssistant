@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systemform>
+  <formid>{4641e7c2-db8b-4bb8-af78-923f20c50071}</formid>
+  <IntroducedVersion>201710.1629</IntroducedVersion>
+  <FormPresentation>1</FormPresentation>
+  <FormActivationState>1</FormActivationState>
+  <form maxWidth="1900" showImage="false" shownavigationbar="true">
+    <tabs>
+      <tab id="{43c8d926-cd3f-4e80-9a5a-8fe6c03a7ec2}" name="tab_General" showlabel="true" expanded="true" locklevel="0" IsUserDefined="1" verticallayout="true">
+        <labels>
+          <label description="General" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{2acf3444-bb2b-4490-8be8-b587dbb2c2e4}" name="sec_General" showlabel="false" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false">
+                <labels>
+                  <label description="General" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{bbd07cc5-9e2e-a085-4cd7-426484ca84c0}" showlabel="true" locklevel="1">
+                      <labels>
+                        <label description="Process Type" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_assessmentprocesstype" uniqueid="{c2099335-3039-a888-35c0-3a2ab0038b58}" datafieldname="cp_assessmentprocesstype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{09E46C48-55FC-4796-A577-DF3F2003E227}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                    <cell id="{ed076438-60c3-73c8-51bd-a9aca577707e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="SLA Due Date" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_sladuedate" uniqueid="{591b452b-9a0b-27a1-68ed-b38079bda3ad}" datafieldname="cp_sladuedate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{38455b7a-ccc1-1b66-0be8-28911408a427}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Referral" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_referral" uniqueid="{1c79c4e6-a2b7-4312-89bc-1949e29aa3aa}" datafieldname="cp_referral" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{663EFFEF-7C0A-4393-9386-A12F63120E3B}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                    <cell id="{e868932c-6078-5959-0715-3526c35817ad}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Action Type" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_actiontype" uniqueid="{2a380c9c-6338-cabd-4c5d-6ead5a99277d}" datafieldname="cp_actiontype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{9918733c-71ad-53a9-c396-3de06c384001}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Claimant Full Name" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_claimantfullname" uniqueid="{1bb0a167-e415-58cd-0d65-023ce691417b}" datafieldname="cp_claimantfullname" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{A2D479C5-53E3-4C69-ADDD-802327E67A0D}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                    <cell id="{d1697cab-8005-c8e2-e6d4-e8dda1b50521}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Allocated To" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_allocatedto" datafieldname="cp_allocatedto" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{9a3a5742-d401-6a16-4d9d-29297523a240}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Initial Review" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_initialreview" uniqueid="{3ea3c039-1bce-a1e0-41cd-89708d9a38cc}" datafieldname="cp_initialreview" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>true</DisableViewPicker>
+                          <DefaultViewId>{5EDD8EB6-9041-E811-A94D-00224801CA18}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                          <FilterRelationshipName>cp_referral_cp_initialreview_Referral</FilterRelationshipName>
+                          <DependentAttributeName>cp_assessment.cp_referral</DependentAttributeName>
+                          <DependentAttributeType>cp_referral</DependentAttributeType>
+                          <AvailableViewIds>{15B39F8F-3A79-4747-959B-921481A9C5E4}</AvailableViewIds>
+                        </parameters>
+                      </control>
+                    </cell>
+                    <cell id="{a1d2a1e3-36a0-3c45-b822-3b0d16c0a24d}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="HP Full Name" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_hp" uniqueid="{28823204-957a-d2a5-6b07-2d1c6cec1b27}" datafieldname="cp_hp" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{662706CA-6EC0-4C0E-A281-521161BE48FA}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                          <AvailableViewIds>{662706CA-6EC0-4C0E-A281-521161BE48FA}</AvailableViewIds>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{3535bece-7cda-5ae1-b1d6-73eb73b68ce0}" showlabel="false" auto="false" colspan="1">
+                      <labels>
+                        <label description="Conditions at IR" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="qvInitialReview" datafieldname="cp_initialreview" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}">
+                        <parameters>
+                          <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="cp_initialreview"&gt;623c40a1-dead-4c07-9c3a-517c16f7074b&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          <ControlMode>Edit</ControlMode>
+                        </parameters>
+                      </control>
+                    </cell>
+                    <cell id="{577b4d5d-8b73-a8ae-4073-203007988559}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Parent Assessment" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_parentassessment" datafieldname="cp_parentassessment" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section id="{2813dda4-dc2d-1ccb-8449-becdc2de1cd7}" name="sec_Rework" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="true" visible="false" layout="varwidth">
+                <labels>
+                  <label description="Rework" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{da61a15d-3d58-414a-1ca9-1ec10472b805}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Type Of Rework" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_typeofrework" datafieldname="cp_typeofrework" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                    <cell id="{548a2308-c0d4-9ed3-5b33-743dec814136}" showlabel="true" locklevel="0" rowspan="3">
+                      <labels>
+                        <label description="Rework Comments" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_reworkcomments" uniqueid="{a185b38a-b4b4-3d45-11a8-b861ed07256c}" datafieldname="cp_reworkcomments" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{5481408b-ac6e-9777-7065-2b8b2cbd10d7}" showlabel="false" auto="false" colspan="1">
+                      <labels>
+                        <label description="Initial Review" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="qvIR" datafieldname="cp_initialreview" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}">
+                        <parameters>
+                          <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="cp_initialreview"&gt;9c6c9465-f8b8-4729-9301-254e5e54f6d2&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          <ControlMode>Edit</ControlMode>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{964b8199-c3c0-89aa-7e14-c7ec9182e434}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section id="{bec77845-c49b-a4b7-17c0-44c11d6eac2e}" name="sec_Advice" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="170" columns="1" showbar="true" visible="false" layout="varwidth">
+                <labels>
+                  <label description="Advice" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{79701b54-2cd9-9011-91cd-aad39c19642e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Nature of Advice" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_natureofadvice" uniqueid="{362a7b3b-2112-16e8-5ec8-1634625e010b}" datafieldname="cp_natureofadvice" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{5b20a386-d946-e022-7a4b-51a25747c4d4}" showlabel="true" locklevel="0" colspan="1" rowspan="3">
+                      <labels>
+                        <label description="Advice Request" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_advicerequest" uniqueid="{3ca9b90e-d6a1-3223-1206-cbea80719854}" datafieldname="cp_advicerequest" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row>
+                    <cell id="{95496d22-3227-0a18-2866-9872e71c6d20}" showlabel="true" locklevel="0" colspan="1" rowspan="3">
+                      <labels>
+                        <label description="Advice Response" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_adviceresponse" uniqueid="{aa64c99d-a40c-9964-c97d-a00bae64da96}" datafieldname="cp_adviceresponse" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row>
+                    <cell id="{5cad49ac-1906-0302-5159-82b62761e010}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Informed To Log Advice Request" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_informedtologadvicerequest" datafieldname="cp_informedtologadvicerequest" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{6bbd0b14-5a29-562d-59b1-7e5412d88454}" name="tab_Appointments" showlabel="true" expanded="true" locklevel="0" IsUserDefined="0" visible="false">
+        <labels>
+          <label description="Appointments" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="50%">
+            <sections>
+              <section id="{1ecdae12-cc51-d251-35e4-aae38d50a0bb}" height="auto" name="sec_Appointment" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="150" columns="1" showbar="true" layout="varwidth">
+                <labels>
+                  <label description="Appointment" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{87e9c0be-d271-904d-c303-701db9272cde}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Current Appointment" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_currentappointment" uniqueid="{da049e82-7643-0803-acd8-bcdd31c88266}" datafieldname="cp_currentappointment" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{F6EBB018-5A2F-4E62-BD41-1B8C121AA7FC}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{c738ae3b-2038-35c3-6569-da1c27b51145}" showlabel="false" auto="false" colspan="1">
+                      <labels>
+                        <label description="Current Appointment" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="qv_Appointment" datafieldname="cp_currentappointment" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}">
+                        <parameters>
+                          <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="cp_appointmentslot"&gt;0a42f9ec-55c3-4060-9d63-8c808bb9f468&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          <ControlMode>Edit</ControlMode>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{187ed74a-2e9c-1b98-a23a-1a9e1cd55163}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Provisional Appointment" languagecode="1033" />
+                      </labels>
+                      <control id="cp_provisionalappointment" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="cp_provisionalappointment" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{56166de8-8d1d-40c8-7e30-e73861ee090d}" showlabel="false" colspan="1" auto="false">
+                      <labels>
+                        <label description="Provisional Appointment" languagecode="1033" />
+                      </labels>
+                      <control id="qv_ProvisionalAppointment" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="cp_provisionalappointment" disabled="false">
+                        <parameters>
+                          <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="cp_appointmentslot"&gt;0a42f9ec-55c3-4060-9d63-8c808bb9f468&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          <ControlMode>Edit</ControlMode>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+          <column width="50%">
+            <sections>
+              <section id="{96994b69-d0d9-b3b3-8de3-6ee8550217a8}" name="sec_F2F" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="200" columns="1" showbar="true" layout="varwidth">
+                <labels>
+                  <label description="F2F" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{21c9b665-c8de-05b4-c3ee-e6d72b103aaa}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Current Location of Assessment" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_currentlocationofassessment" uniqueid="{89b2aa6b-452d-9d40-a454-9a7a2c333c77}" datafieldname="cp_currentlocationofassessment" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{cca925b3-08dd-2b9d-2aa2-853917820488}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Required Location of Assessment" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_requiredlocationofassessment" uniqueid="{e1d9536d-ba05-5b44-53c0-174bd0b89a9a}" datafieldname="cp_requiredlocationofassessment" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{146d636c-800c-2ea2-2b87-aac82b312e7a}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Venue" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_venue" uniqueid="{be758dd3-0978-6512-c6ca-030e1a33ea87}" datafieldname="cp_venue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{14199987-85F5-42C8-9886-8EAB1C6B1C83}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{0e5bc6da-a011-29be-72de-aa5073012704}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Exclude from Auto Booking" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_excludefromautobooking" datafieldname="cp_excludefromautobooking" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+        <events>
+          <event name="tabstatechange" active="false" application="false">
+            <Handlers>
+              <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{440bcc73-c7a1-c3d5-8214-8b4311acd690}" libraryName="cp_/scripts/assessmentForm.js" functionName="Phoenix.AssessmentForm.appointmentsTabStateChange" />
+            </Handlers>
+          </event>
+        </events>
+      </tab>
+      <tab id="{710133c6-a52b-1151-9db0-deb24d157d16}" name="tab_AppointmentHistory" showlabel="false" expanded="true" locklevel="0" IsUserDefined="0">
+        <labels>
+          <label description="Appointment History" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{24868294-ed62-67a1-3ab2-4c7630dea192}" height="auto" name="tab_8_section_1" showlabel="false" locklevel="0" IsUserDefined="0" labelwidth="115" columns="1" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Section" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{e60ad80a-0b3e-4eda-1e68-446e0b0d177a}" showlabel="true" auto="true" colspan="1" rowspan="4">
+                      <labels>
+                        <label description="Appointment Histories" languagecode="1033" />
+                      </labels>
+                      <control id="grdAppointmentHistories" uniqueid="{a2cd9d08-24cb-edcb-21e7-d9e1d5c4ab91}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                        <parameters>
+                          <ViewId>{CB608D65-8AFF-E711-9675-00155D0E5F01}</ViewId>
+                          <IsUserView>false</IsUserView>
+                          <RelationshipName>cp_assessment_cp_appointmenthistory_Assessment</RelationshipName>
+                          <TargetEntityType>cp_appointmenthistory</TargetEntityType>
+                          <AutoExpand>Auto</AutoExpand>
+                          <EnableQuickFind>false</EnableQuickFind>
+                          <EnableViewPicker>false</EnableViewPicker>
+                          <ViewIds>{4C537839-EC38-44D5-89B2-651DB8682EA6},{CB608D65-8AFF-E711-9675-00155D0E5F01}</ViewIds>
+                          <EnableJumpBar>false</EnableJumpBar>
+                          <ChartGridMode>All</ChartGridMode>
+                          <VisualizationId />
+                          <IsUserChart>false</IsUserChart>
+                          <EnableChartPicker>true</EnableChartPicker>
+                          <RecordsPerPage>4</RecordsPerPage>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row height="auto" />
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{d5d521e3-9212-ebc0-b299-1da066217e90}" name="tab_9" showlabel="false" expanded="true" locklevel="0" IsUserDefined="0">
+        <labels>
+          <label description="PIPAT Mobile Allocation/De-allocation Tracking" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="50%">
+            <sections>
+              <section id="{810a7511-89a7-9978-62c5-936818d615ed}" name="tab_AppointmentHistory_section_2" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="1" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="PIPAT Mobile Allocation/De-allocation Tracking" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{68ed3c3e-d88c-158e-739b-590d15dd2901}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Allocation Status" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_allocationstatus" datafieldname="cp_allocationstatus" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{0a4cb943-84be-9aec-7343-e4224a3c3009}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="De-Allocated By User" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_deallocatedbyuser" uniqueid="{a780007e-c4bb-1045-6927-e760e3eb5357}" datafieldname="cp_deallocatedbyuser" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+          <column width="50%">
+            <sections>
+              <section id="{d8c22843-4b4e-9abe-c7b9-3ce514395836}" name="tab_9_section_2" showlabel="false" locklevel="0" IsUserDefined="0" labelwidth="115" columns="1" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Section" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{1b3324db-aea3-6449-1708-75a24ad70610}" showlabel="false" auto="false" colspan="1">
+                      <labels>
+                        <label description="MAPS ID" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="MAPSID" datafieldname="cp_hp" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}">
+                        <parameters>
+                          <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="bookableresource"&gt;71ac82e6-8eb6-4a13-8a49-490c686c4cea&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          <ControlMode>Edit</ControlMode>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{92bc50ac-d29b-d582-bb58-2d1c576db9a8}" name="tab_Report" showlabel="true" expanded="true" locklevel="0" IsUserDefined="0">
+        <labels>
+          <label description="Report Details" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{59ab3924-3540-24e6-add2-02cab640cada}" name="sec_ReportDetails" showlabel="false" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="170" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Report Creation" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{54836cc0-b058-9701-025b-676ed0434a49}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Preparation Time" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_preparationtime" datafieldname="cp_preparationtime" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" />
+                    </cell>
+                    <cell id="{c36c7eac-8a0b-71ba-be32-2d72e2a874d4}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Unsolicited FME received by HP" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_unsolicitedfmereceivedbyhp" datafieldname="cp_unsolicitedfmereceivedbyhp" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{9e910833-a94a-a473-019a-34bdb30e45d8}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Write Up Time (minutes)" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_writeuptimeminutes" datafieldname="cp_writeuptimeminutes" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" />
+                    </cell>
+                    <cell id="{87c42e65-1a64-164e-2edc-63bd5ce26a2e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Unsolicited FME seen by HP" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_unsolicitedfmeseenbyhp" datafieldname="cp_unsolicitedfmeseenbyhp" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section id="{347485ed-e614-61c5-9d21-407578610c36}" name="sec_Reassessment" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="111" showbar="true" layout="varwidth">
+                <labels>
+                  <label description="Reassessment Period" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{b474638a-b3c6-08a5-1ea9-1be4024e0917}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Years" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_reassessmentperiodyears" uniqueid="{0d91183e-c1e0-0ed1-bd83-eb009caeddc6}" datafieldname="cp_reassessmentperiodyears" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" />
+                    </cell>
+                    <cell id="{3c735b69-229b-6b1a-0a1d-1ac20c210c63}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Months" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_reassessmentperiodmonths" uniqueid="{eb61d3d1-5383-06a5-d0a0-26b8917adc47}" datafieldname="cp_reassessmentperiodmonths" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" />
+                    </cell>
+                    <cell id="{18e2b68a-4a23-95d0-43a3-86d829702439}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Change Unlikely" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_reassessmentperiodchangeunlikely" uniqueid="{5c705088-2d87-4c25-378b-781ed4b9ba66}" datafieldname="cp_reassessmentperiodchangeunlikely" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section name="sec_FunctionalRestrictions" showlabel="true" showbar="true" locklevel="0" id="{66e7ee09-3439-ddc2-6dd3-c7ed1642dbb7}" IsUserDefined="0" layout="varwidth" columns="111" labelwidth="200" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="Functional Restrictions" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{9730e77a-2988-52d9-118a-043ea1c27adc}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Daily Living Activities" languagecode="1033" />
+                      </labels>
+                      <control id="cp_restrictiondailylivingactivities" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_restrictiondailylivingactivities" disabled="false" uniqueid="{00cc5407-3617-8b4a-83e4-20d28b7aa569}" />
+                    </cell>
+                    <cell id="{18c69c7c-5dc5-aae5-894d-216568682744}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Mobility Activities" languagecode="1033" />
+                      </labels>
+                      <control id="cp_restrictionmobilityactivities" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_restrictionmobilityactivities" disabled="false" uniqueid="{0e2d12e4-440a-a848-25e9-48dc0e2ce422}" />
+                    </cell>
+                    <cell id="{6a4024ee-d714-24ea-62e9-3b7eac7739c4}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="At Reccommended Point of Review" languagecode="1033" />
+                      </labels>
+                      <control id="cp_restrictionrecommendedpointofreview" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_restrictionrecommendedpointofreview" disabled="false" uniqueid="{d68038a1-8db3-597c-d427-e9e0dea1ece2}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{3ec8c4dc-de7e-209d-81c5-81685e81cd2e}" name="tab_Finance" showlabel="true" expanded="false" locklevel="0" IsUserDefined="0">
+        <labels>
+          <label description="Finance" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{18a79e77-c2eb-5306-3ae4-5336e9889292}" name="sec_Finance" showlabel="false" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Finance" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{ba94d580-6733-578e-a4de-0a34a7b612b2}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="HP Rate" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_hprate" uniqueid="{d96d56bd-31e7-cad2-3191-947ce654465e}" datafieldname="cp_hprate" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                    <cell id="{ee761506-5236-7570-ebe0-75cd99c50582}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="HP Payment Processed" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_hppaymentprocessed" uniqueid="{935304db-893e-3ceb-2667-3671826ec006}" datafieldname="cp_hppaymentprocessed" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{e4c5258e-571b-4b06-2205-0483106ce9d9}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Assessment Centre Code" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_assessmentcentrecode" uniqueid="{eda905b1-cb96-807d-588e-3de3a76aa194}" datafieldname="cp_assessmentcentrecode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" />
+                    </cell>
+                    <cell id="{4d6dbbe6-d870-bb38-7805-9db061b9727b}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{28441e7d-da71-5a6c-968b-9d9a4c80b492}" name="tab_Cancellation" showlabel="true" expanded="true" locklevel="0" IsUserDefined="0">
+        <labels>
+          <label description="Cancellation" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{255671d2-75da-2050-298d-bdd2ac0a4e47}" name="sec_Cancellation" showlabel="false" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Cancellation" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{19591d4c-a77c-b85c-ded7-be561ce269b8}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Assessment Submission Date" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_assessmentsubmissiondate" uniqueid="{b807db4e-d873-878e-0680-32a80c6c98c4}" datafieldname="cp_assessmentsubmissiondate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                    <cell id="{cbae8bab-b5e2-d47c-dc71-769842101db9}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Cancelled Reason" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_cancelledreason" uniqueid="{3ba73292-0e00-e15a-3129-475c01b63490}" datafieldname="cp_cancelledreason" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{ec82c319-ccdb-66d4-911c-87adc3ca4aad}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Cancellation Date" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_cancellationdate" uniqueid="{0c9c12bc-83b4-3869-a17e-42286e7dbbde}" datafieldname="cp_cancellationdate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                    <cell id="{e9626b9e-b0d7-105c-5477-54c6669ad6ad}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Cancelled By" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="cp_cancelledby" uniqueid="{bea90e29-ad8b-d8dd-ba9c-bb57e9bba6a5}" datafieldname="cp_cancelledby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                        <parameters>
+                          <AutoResolve>true</AutoResolve>
+                          <DisableMru>false</DisableMru>
+                          <DisableQuickFind>false</DisableQuickFind>
+                          <DisableViewPicker>false</DisableViewPicker>
+                          <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
+                          <AllowFilterOff>false</AllowFilterOff>
+                        </parameters>
+                      </control>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{c534146d-516c-51a0-9401-5609370c8631}" name="tab_FTA" showlabel="true" expanded="false" locklevel="0" IsUserDefined="0" visible="false">
+        <labels>
+          <label description="FTA/FTC/ANC" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{3a85b7b3-ba07-7338-b85e-778a9ab60173}" name="sec_FTAGeneral" showlabel="false" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="FTA General" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{37288c60-9591-c5bc-5512-2a505b7ccb72}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Appointment Booked" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_appointmentbooked" datafieldname="cp_appointmentbooked" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                    <cell id="{27b16282-6c3b-2194-d6e5-3c705253a020}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Appointment Letter Sent" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_appointmentlettersent" datafieldname="cp_appointmentlettersent" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{6b515720-00c2-374b-c725-ec594861b348}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Appointment Date Time" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_appointmentdatetime" datafieldname="cp_appointmentdatetime" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                    <cell id="{b62097a4-5606-4b11-34b1-4e19e9d736a1}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Reminder Letter Sent" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_reminderlettersent" datafieldname="cp_reminderlettersent" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section id="{ccb65385-67c5-bcc6-6a84-e37c450635b1}" name="sec_FTASMS" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="SMS" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{ae570c5a-c9e0-2ad1-8a03-955e75693394}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="SMS Sent" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_smssent" datafieldname="cp_smssent" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                    <cell id="{42109140-09d0-d5e1-6be8-40b7b2a6434a}" showlabel="true" locklevel="0" rowspan="3">
+                      <labels>
+                        <label description="SMS Sent Details" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_smssentdetails" uniqueid="{59e15658-dbb4-6cd0-aa21-6085a2a7b38c}" datafieldname="cp_smssentdetails" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{99dd3a44-2c28-00b3-b0a2-c2a1a7306132}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{05aebcec-48a8-dc50-5646-deec972d736a}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section id="{32ce451d-26a8-b0ce-349c-54ddbc7abb6b}" name="sec_FTACalls" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Calls" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{60ad61ca-73eb-8961-65cc-9a8e6880556e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Confirmation Call" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_confirmationcall" datafieldname="cp_confirmationcall" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                    <cell id="{32c891cd-c177-b393-48e4-482daca6a722}" showlabel="true" locklevel="0" rowspan="3">
+                      <labels>
+                        <label description="Confirmation Call Details" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_confirmationcalldetails" uniqueid="{94a20d1e-da69-003e-8712-d6549431a586}" datafieldname="cp_confirmationcalldetails" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{28badbe6-6e88-2929-5c56-7923a75adae7}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{8dc4b6db-01a1-a4cd-ad12-6314ecb3a221}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+              <section id="{d60a9428-e67c-4bdb-d4bc-30a2bc7d0236}" name="sec_Details" showlabel="true" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="FTA/FTC/ANC Details" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{67a3a835-0b20-283d-8283-ecb86e62d204}" showlabel="true" locklevel="0" colspan="2" rowspan="3">
+                      <labels>
+                        <label description="Letter Address" languagecode="1033" />
+                      </labels>
+                      <control id="cp_letteraddress" uniqueid="{770a3680-437c-cd41-1eae-53d7d63157db}" datafieldname="cp_letteraddress" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row>
+                    <cell id="{31a5d591-e5e4-75e3-27b3-56329e503d26}" showlabel="true" locklevel="0" colspan="2" rowspan="3">
+                      <labels>
+                        <label description="Appointment Comments" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_appointmentcomments" uniqueid="{337d8dac-caab-5288-cd8c-30780a0eb69e}" datafieldname="cp_appointmentcomments" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                    </cell>
+                  </row>
+                  <row />
+                  <row />
+                  <row>
+                    <cell id="{9c3a441c-e605-06d2-65e6-ac1de32b2481}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Outcome" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_ftaoutcome" uniqueid="{5347c523-200c-29b0-2020-60a7dec74275}" datafieldname="cp_ftaoutcome" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                    <cell id="{72d20087-ba4d-c67d-626c-65258b5ec5ae}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="DA Attended" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_daattended" datafieldname="cp_daattended" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{a10adb5a-3e48-3542-ea57-e6013564698c}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Outcome Details" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_ftaoutcomedetails" uniqueid="{e305d761-2d20-bb22-33c4-6c6c5d451140}" datafieldname="cp_ftaoutcomedetails" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                    <cell id="{067c3e8c-cdb2-1797-a013-2e1be170c3d3}" showlabel="false">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+      <tab id="{032a6638-eddd-a63e-ee1d-5bdd0eb6baa9}" name="tab_System" showlabel="true" expanded="true" locklevel="0" IsUserDefined="0">
+        <labels>
+          <label description="System" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{4251c538-c258-2dea-11ae-db136aa82ec4}" name="tab_2_section_1" showlabel="false" locklevel="0" IsUserDefined="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" columns="11" showbar="false" layout="varwidth">
+                <labels>
+                  <label description="Section" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{0c05cb55-c6ee-e3cb-22c8-96d8636be32b}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Created On" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="createdon" datafieldname="createdon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                    <cell id="{2bece33e-52a6-5009-0e15-eec0da2cbe49}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Completed On" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_completedon" datafieldname="cp_completedon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{61aced6e-4c07-50d1-a7cc-172a35b290ba}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Created By" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="createdby" datafieldname="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+                    </cell>
+                    <cell id="{995ff55c-15be-4c22-90fa-f94a65fe5f1b}" showlabel="true" locklevel="0" visible="false">
+                      <labels>
+                        <label description="Assessment Reference" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_name" uniqueid="{3bb2cb49-73da-e34d-7530-0944cdd3322a}" datafieldname="cp_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{334260db-8191-accb-49da-e33ec5edb231}" showlabel="true" locklevel="0" visible="false">
+                      <labels>
+                        <label description="Assessment Tool" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_assessmenttool" uniqueid="{2b6a7018-2c2c-e154-0d93-5ca03c9b018e}" datafieldname="cp_assessmenttool" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                    <cell id="{e7d81824-295c-391b-1e41-8eb5a1c2e709}" showlabel="true" locklevel="0" visible="false">
+                      <labels>
+                        <label description="Is PIPAT" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_ispipat" datafieldname="cp_ispipat" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" uniqueid="{85291e98-6ac9-11e4-d976-6b372705a932}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{edce68a9-c8b5-1c2b-90c6-38cdbe1c5456}" showlabel="true" locklevel="1">
+                      <labels>
+                        <label description="Status" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="statecode" uniqueid="{7acd92c5-92ee-abd0-377c-bc3e6c911ea9}" datafieldname="statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                    </cell>
+                    <cell id="{c190b451-2f95-4c79-be94-5e6366028cd0}">
+                      <labels>
+                        <label description="Owner" languagecode="1033" />
+                      </labels>
+                      <control id="ownerid" datafieldname="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{a323a7b1-95db-9d71-14be-c67aacc39405}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Status Reason" languagecode="1033" />
+                      </labels>
+                      <control disabled="true" id="statuscode" uniqueid="{d5a23488-c497-8ba6-d52c-7365c4dc0c29}" datafieldname="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" />
+                    </cell>
+                    <cell id="{259d3634-425b-b088-084e-557253be1c76}" showlabel="true" locklevel="0" visible="false">
+                      <labels>
+                        <label description="Original Author Approval Required" languagecode="1033" />
+                      </labels>
+                      <control disabled="false" id="cp_originalauthorapprovalrequired" uniqueid="{8a47c14d-a954-47ad-d95a-9cb205c10547}" datafieldname="cp_originalauthorapprovalrequired" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+    </tabs>
+    <header id="{210a86a6-a318-41f4-b285-5fa12b01c042}" columns="111">
+      <rows>
+        <row>
+          <cell id="{305861dc-7a46-e1b0-04ea-1cb99486216c}" showlabel="true" locklevel="1">
+            <labels>
+              <label description="Type" languagecode="1033" />
+            </labels>
+            <control disabled="true" id="header_cp_assessmentprocesstype" uniqueid="{a3796319-9583-cdab-e245-c72a3d7ce07d}" datafieldname="cp_assessmentprocesstype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+              <parameters>
+                <AutoResolve>true</AutoResolve>
+                <DisableMru>false</DisableMru>
+                <DisableQuickFind>false</DisableQuickFind>
+                <DisableViewPicker>false</DisableViewPicker>
+                <DefaultViewId>{09E46C48-55FC-4796-A577-DF3F2003E227}</DefaultViewId>
+                <AllowFilterOff>false</AllowFilterOff>
+              </parameters>
+            </control>
+          </cell>
+          <cell id="{68eaeb1b-21b4-66e5-d49b-2109d12816b5}" showlabel="true" locklevel="0">
+            <labels>
+              <label description="Assessment Tool" languagecode="1033" />
+            </labels>
+            <control disabled="false" id="header_cp_assessmenttool" datafieldname="cp_assessmenttool" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+          </cell>
+          <cell id="{307c2a74-3122-1138-b3cc-ca8d961c27d5}" showlabel="true" locklevel="0" colspan="1">
+            <labels>
+              <label description="Status Reason" languagecode="1033" />
+            </labels>
+            <control disabled="true" id="header_statuscode" uniqueid="{56050ce3-1a63-c29d-7087-eddac10dbce5}" datafieldname="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" />
+          </cell>
+        </row>
+      </rows>
+    </header>
+    <footer id="{12d6bc80-2180-42df-9a16-762b302b7af5}" columns="111">
+      <rows>
+        <row>
+          <cell id="{2c52633c-53de-8677-98d8-16ceb335444b}" showlabel="true" locklevel="0">
+            <labels>
+              <label description="Modified On" languagecode="1033" />
+            </labels>
+            <control disabled="true" id="footer_modifiedon" datafieldname="modifiedon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+          </cell>
+          <cell id="{886b2350-51c3-b34c-4a2d-22d42cbcb448}" showlabel="true" locklevel="0">
+            <labels>
+              <label description="Modified By" languagecode="1033" />
+            </labels>
+            <control disabled="true" id="footer_modifiedby" datafieldname="modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+          </cell>
+          <cell id="{84e099b8-7ae3-44c9-d104-dc4e872c2c28}" showlabel="true" locklevel="0">
+            <labels>
+              <label description="Owner" languagecode="1033" />
+            </labels>
+            <control id="footer_ownerid" datafieldname="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+          </cell>
+        </row>
+      </rows>
+    </footer>
+    <Navigation>
+      <NavBar>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_appointmentslot_Assessment" Area="Info" Id="nav_cp_assessment_cp_appointmentslot_Assessment" Sequence="10002" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Appointment Slots" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_appointmentslot_ProvisionalAssessment" Area="Info" Id="nav_cp_assessment_cp_appointmentslot_ProvisionalAssessment" Sequence="10004">
+          <Titles>
+            <Title LCID="1033" Text="Appointment Slots" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_appointmenthistory_Assessment" Id="nav_cp_assessment_cp_appointmenthistory_Assessment" Area="Info" Sequence="10005">
+          <Titles>
+            <Title LCID="1033" Text="Appointment Histories" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_assessment_ParentAssessment" Area="Info" Id="nav_cp_assessment_cp_assessment_ParentAssessment" Sequence="10006" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Assessments" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_referral_CurrentAssessment" Area="Info" Id="nav_cp_assessment_cp_referral_CurrentAssessment" Sequence="10016" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Referrals" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_referralclosurereview_Assessment" Area="Info" Id="nav_cp_assessment_cp_referralclosurereview_Assessment" Sequence="10018" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Referral Closure Reviews" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_task_CaseRef" Area="Info" Id="nav_cp_assessment_task_CaseRef" Sequence="10022" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Tasks" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_task_HPTasks" Area="Info" Id="nav_cp_assessment_task_HPTasks" Sequence="10024" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Tasks" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_cp_assessment_cp_referralclosurereview_parentassessment" Area="Info" Id="nav_cp_cp_assessment_cp_referralclosurereview_parentassessment" Sequence="10027" Show="false">
+          <Titles>
+            <Title LCID="1033" Text="Referral Closure Reviews" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_assessmentreport_Assessment" Id="nav_cp_assessment_cp_assessmentreport_Assessment" Area="Info" Sequence="10028">
+          <Titles>
+            <Title LCID="1033" Text="Assessment Reports" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_milestone_Assessment" Id="nav_cp_assessment_cp_milestone_Assessment" Area="Info" Sequence="10029">
+          <Titles>
+            <Title LCID="1033" Text="Milestones" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_qasummary_Assessment" Id="nav_cp_assessment_cp_qasummary_Assessment" Area="Info" Sequence="10030">
+          <Titles>
+            <Title LCID="1033" Text="QA Summaries" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_qareview_Assessment" Id="nav_cp_assessment_cp_qareview_Assessment" Area="Info" Sequence="10031">
+          <Titles>
+            <Title LCID="1033" Text="QA Review" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="cp_assessment_cp_referraltask_Assessment" Id="nav_cp_assessment_cp_referraltask_Assessment" Area="Info" Sequence="10032">
+          <Titles>
+            <Title LCID="1033" Text="Referral Tasks" />
+          </Titles>
+        </NavBarByRelationshipItem>
+        <NavBarByRelationshipItem RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navAudit" Id="navAudit" Area="Info" Sequence="10033">
+          <Titles>
+            <Title LCID="1033" Text="Audit History" />
+          </Titles>
+        </NavBarByRelationshipItem>
+      </NavBar>
+      <NavBarAreas>
+        <NavBarArea Id="Info">
+          <Titles>
+            <Title Text="Common" LCID="1033" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Sales">
+          <Titles>
+            <Title Text="Sales" LCID="1033" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Service">
+          <Titles>
+            <Title Text="Service" LCID="1033" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="Marketing">
+          <Titles>
+            <Title Text="Marketing" LCID="1033" />
+          </Titles>
+        </NavBarArea>
+        <NavBarArea Id="ProcessCenter">
+          <Titles>
+            <Title Text="Process Sessions" LCID="1033" />
+          </Titles>
+        </NavBarArea>
+      </NavBarAreas>
+    </Navigation>
+    <controlDescriptions />
+    <formLibraries>
+      <Library name="cp_/scripts/dg.xrmquery.web.promise.min.js" libraryUniqueId="{190c2a62-05be-0802-b759-e2968bc629c1}" />
+      <Library name="cp_/scripts/phoenixCommonConfigService.js" libraryUniqueId="{b1ecb96d-b055-c462-9530-079654debd67}" />
+      <Library name="cp_/scripts/assessmentForm.js" libraryUniqueId="{e7c387a2-b7dd-2b05-9abe-8407d4d6bc79}" />
+    </formLibraries>
+    <events>
+      <event name="onload" active="false" application="false">
+        <dependencies>
+          <dependency id="cp_assessmentprocesstype" />
+        </dependencies>
+        <Handlers>
+          <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{7a0c6a46-a0b8-ed2a-4038-bdea23db7ce0}" libraryName="cp_/scripts/assessmentForm.js" functionName="Phoenix.AssessmentForm.formOnLoad" />
+        </Handlers>
+      </event>
+      <event name="onchange" active="false" application="false" attribute="cp_assessmentprocesstype">
+        <dependencies>
+          <dependency id="cp_assessmentprocesstype" />
+        </dependencies>
+        <Handlers>
+          <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{7a3312e8-4b64-683c-eda5-a078578cdab1}" libraryName="cp_/scripts/assessmentForm.js" functionName="Phoenix.AssessmentForm.assessmentTypeOnChange" />
+        </Handlers>
+      </event>
+      <event name="onchange" active="false" application="false" attribute="cp_natureofadvice">
+        <Handlers>
+          <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{193d5016-6859-7d58-515e-da2c834c746a}" libraryName="cp_/scripts/assessmentForm.js" functionName="Phoenix.AssessmentForm.natureOfAdviceOnChange" />
+        </Handlers>
+      </event>
+    </events>
+  </form>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <LocalizedNames>
+    <LocalizedName description="Assessment" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="A form for this entity." languagecode="1033" />
+  </Descriptions>
+</systemform>

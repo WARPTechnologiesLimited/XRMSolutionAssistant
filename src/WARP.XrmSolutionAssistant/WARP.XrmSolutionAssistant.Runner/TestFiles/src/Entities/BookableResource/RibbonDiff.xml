@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+  <CustomActions>
+    <CustomAction Id="cp.bookableresource.BulkManageAppointments.Button.CustomAction" Location="Mscrm.Form.bookableresource.MainTab.Save.Controls._children" Sequence="95">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.bookableresource.BulkManageAppointments.Button.Alt" Command="cp.bookableresource.BulkManageAppointments.Command" Id="cp.bookableresource.BulkManageAppointments.Button" Image16by16="$webresource:cp_/images/appointmentSlot16.png" LabelText="$LocLabels:cp.bookableresource.BulkManageAppointments.Button.LabelText" Sequence="95" TemplateAlias="isv" ToolTipTitle="$LocLabels:cp.bookableresource.BulkManageAppointments.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.bookableresource.BulkManageAppointments.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.bookableresource.BulkSessionGeneration.Button.CustomAction" Location="Mscrm.Form.bookableresource.MainTab.ModernClient.Controls._children" Sequence="7">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.bookableresource.BulkSessionGeneration.Button.Alt" Command="cp.bookableresource.BulkSessionGeneration.Command" Id="cp.bookableresource.BulkSessionGeneration.Button" Image16by16="$webresource:cp_/images/appointmentSlot16.png" LabelText="$LocLabels:cp.bookableresource.BulkSessionGeneration.Button.LabelText" Sequence="7" ToolTipTitle="$LocLabels:cp.bookableresource.BulkSessionGeneration.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.bookableresource.BulkSessionGeneration.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="cp.Mscrm.Form.bookableresource.Activate.Hide" Location="Mscrm.Form.bookableresource.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.Form.bookableresource.Deactivate.Hide" Location="Mscrm.Form.bookableresource.Deactivate" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.bookableresource.Activate.Hide" Location="Mscrm.HomepageGrid.bookableresource.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.bookableresource.Deactivate.Hide" Location="Mscrm.HomepageGrid.bookableresource.Deactivate" />
+    <HideCustomAction HideActionId="cp.Mscrm.SubGrid.bookableresource.Activate.Hide" Location="Mscrm.SubGrid.bookableresource.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.SubGrid.bookableresource.Deactivate.Hide" Location="Mscrm.SubGrid.bookableresource.Deactivate" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="cp.bookableresource.BulkManageAppointments.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.bookableresource.BulkManageAppointments.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.BookableResourceForm.openBulkManageAppointmentsPopup" Library="$webresource:cp_/scripts/bookableResourceForm.js" />
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.bookableresource.BulkSessionGeneration.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.bookableresource.BulkSessionGeneration.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.BookableResourceForm.openBulkSessionGenerationPopup" Library="$webresource:cp_/scripts/bookableResourceForm.js" />
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="cp.bookableresource.BulkManageAppointments.DisplayRule">
+        <FormStateRule State="Create" Default="false" InvertResult="true" />
+        <EntityPrivilegeRule PrivilegeType="Create" PrivilegeDepth="Global" AppliesTo="SelectedEntity" EntityName="cp_session" Default="false" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="cp.bookableresource.BulkSessionGeneration.DisplayRule">
+        <FormStateRule State="Create" Default="false" InvertResult="true" />
+        <EntityPrivilegeRule PrivilegeType="Create" PrivilegeDepth="Global" AppliesTo="SelectedEntity" EntityName="cp_session" Default="false" InvertResult="false" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="cp.bookableresource.BulkManageAppointments.Button.Alt">
+      <Titles>
+        <Title description="Bulk Manage Appointments" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkManageAppointments.Button.LabelText">
+      <Titles>
+        <Title description="Bulk Manage Appointments" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkManageAppointments.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Allows cancellation of appointments in bulk" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkManageAppointments.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Bulk Manage Appointments" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkSessionGeneration.Button.Alt">
+      <Titles>
+        <Title description="Bulk Session Generation" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkSessionGeneration.Button.LabelText">
+      <Titles>
+        <Title description="Bulk Session Generation" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkSessionGeneration.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Allows Bulk Generation of Sessions" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.bookableresource.BulkSessionGeneration.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Bulk Session Generation" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

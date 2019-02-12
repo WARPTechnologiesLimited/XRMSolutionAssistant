@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+  <CustomActions>
+    <CustomAction Id="cp.cp_assessment.AllocateTo.Button.CustomAction" Location="Mscrm.HomepageGrid.cp_assessment.MainTab.Collaborate.Controls._children" Sequence="48">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_assessment.AllocateTo.Button.Alt" Command="cp.cp_assessment.AllocateAssessment.Command" Id="cp.cp_assessment.AllocateTo.Button" Image16by16="$webresource:cp_/images/allocateWork16.png" LabelText="$LocLabels:cp.cp_assessment.AllocateTo.Button.LabelText" Sequence="48" TemplateAlias="o1" ToolTipTitle="$LocLabels:cp.cp_assessment.AllocateTo.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_assessment.AllocateTo.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.cp_assessment.BookAppointment.Button.CustomAction" Location="Mscrm.Form.cp_assessment.MainTab.Save.Controls._children" Sequence="95">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_assessment.BookAppointment.Button.Alt" Command="cp.cp_assessment.BookAppointmentPopup.Command" Id="cp.cp_assessment.BookAppointment.Button" Image16by16="$webresource:cp_/images/appointmentSlot16.png" LabelText="$LocLabels:cp.cp_assessment.BookAppointment.Button.LabelText" Sequence="95" TemplateAlias="isv" ToolTipTitle="$LocLabels:cp.cp_assessment.BookAppointment.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_assessment.BookAppointment.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.cp_assessment.Cancel.Button.CustomAction" Location="Mscrm.Form.cp_assessment.MainTab.Save.Controls._children" Sequence="48">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_assessment.Cancel.Button.Alt" Command="cp.cp_assessment.Cancel.Command" Id="cp.cp_assessment.Cancel.Button" Image16by16="$webresource:cp_/images/cancel16.png" LabelText="$LocLabels:cp.cp_assessment.Cancel.Button.LabelText" Sequence="48" TemplateAlias="o2" ToolTipTitle="$LocLabels:cp.cp_assessment.Cancel.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_assessment.Cancel.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.cp_assessment.Complete.Button.CustomAction" Location="Mscrm.Form.cp_assessment.MainTab.Save.Controls._children" Sequence="45">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_assessment.Complete.Button.Alt" Command="cp.cp_assessment.Complete.Command" Id="cp.cp_assessment.Complete.Button" Image16by16="$webresource:cp_/images/checkMark16.png" LabelText="$LocLabels:cp.cp_assessment.Complete.Button.LabelText" Sequence="45" TemplateAlias="o2" ToolTipTitle="$LocLabels:cp.cp_assessment.Complete.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_assessment.Complete.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.cp_assessment.CreateReferralTask.Button.CustomAction" Location="Mscrm.Form.cp_assessment.MainTab.Save.Controls._children" Sequence="100">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_assessment.CreateReferralTask.Button.Alt" Command="cp.cp_assessment.CreateReferralTask.Command" Id="cp.cp_assessment.CreateReferralTask.Button" Image32by32="$webresource:cp_/images/referralTask32.png" Image16by16="$webresource:cp_/images/referralTask16.png" LabelText="$LocLabels:cp.cp_assessment.CreateReferralTask.Button.LabelText" Sequence="100" TemplateAlias="isv" ToolTipTitle="$LocLabels:cp.cp_assessment.CreateReferralTask.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_assessment.CreateReferralTask.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="cp.Mscrm.Form.cp_assessment.Activate.Hide" Location="Mscrm.Form.cp_assessment.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.Form.cp_assessment.Deactivate.Hide" Location="Mscrm.Form.cp_assessment.Deactivate" />
+    <HideCustomAction HideActionId="cp.Mscrm.Form.cp_assessment.NewRecord.Hide" Location="Mscrm.Form.cp_assessment.NewRecord" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.cp_assessment.Activate.Hide" Location="Mscrm.HomepageGrid.cp_assessment.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.cp_assessment.Deactivate.Hide" Location="Mscrm.HomepageGrid.cp_assessment.Deactivate" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.cp_assessment.NewRecord.Hide" Location="Mscrm.HomepageGrid.cp_assessment.NewRecord" />
+    <HideCustomAction HideActionId="cp.Mscrm.SubGrid.cp_assessment.Activate.Hide" Location="Mscrm.SubGrid.cp_assessment.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.SubGrid.cp_assessment.Deactivate.Hide" Location="Mscrm.SubGrid.cp_assessment.Deactivate" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="cp.cp_assessment.AllocateAssessment.Command">
+      <EnableRules>
+        <EnableRule Id="cp.cp_assessment.SelectedRecordsCount.EnableRule" />
+      </EnableRules>
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AssessmentCommandBar.allocateAssessment" Library="$webresource:cp_/scripts/assessmentCommandBar.js">
+          <CrmParameter Value="SelectedControlSelectedItemReferences" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.cp_assessment.BookAppointmentPopup.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.cp_assessment.CanBookAppointment.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AssessmentForm.openBookAppointmentPopup" Library="$webresource:cp_/scripts/assessmentForm.js" />
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.cp_assessment.Cancel.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.cp_assessment.CanCreate.DisplayRule" />
+        <DisplayRule Id="cp.cp_assessment.ActiveRecord.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AssessmentCommandBar.cancelAssessment" Library="$webresource:cp_/scripts/assessmentCommandBar.js" />
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.cp_assessment.Complete.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.cp_assessment.ActiveRecord.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AssessmentCommandBar.completeAssessment" Library="$webresource:cp_/scripts/assessmentCommandBar.js" />
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.cp_assessment.CreateReferralTask.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.cp_assessment.OAAR.DisplayRule" />
+        <DisplayRule Id="cp.cp_assessment.ActiveRecord.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AssessmentCommandBar.createReferralTask" Library="$webresource:cp_/scripts/assessmentCommandBar.js" />
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="cp.cp_assessment.ActiveRecord.DisplayRule">
+        <FormStateRule State="Existing" Default="false" />
+      </DisplayRule>
+      <DisplayRule Id="cp.cp_assessment.CanBookAppointment.DisplayRule">
+        <EntityPrivilegeRule PrivilegeType="Write" PrivilegeDepth="Basic" AppliesTo="SelectedEntity" EntityName="cp_appointmentslot" Default="false" InvertResult="false" />
+        <FormStateRule State="Existing" Default="false" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="cp.cp_assessment.CanCreate.DisplayRule">
+        <EntityPrivilegeRule PrivilegeType="Create" PrivilegeDepth="Deep" AppliesTo="PrimaryEntity" />
+      </DisplayRule>
+      <DisplayRule Id="cp.cp_assessment.OAAR.DisplayRule">
+        <ValueRule Field="cp_originalauthorapprovalrequired" Value="1" Default="false" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="cp.cp_assessment.SelectedRecordsCount.EnableRule">
+        <SelectionCountRule AppliesTo="SelectedEntity" Minimum="1" Maximum="50" Default="false" />
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="cp.cp_assessment.AllocateTo.Button.Alt">
+      <Titles>
+        <Title description="Allocate Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.AllocateTo.Button.LabelText">
+      <Titles>
+        <Title description="Allocate" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.AllocateTo.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Allocates the assessment to a user." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.AllocateTo.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Allocate" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.BookAppointment.Button.Alt">
+      <Titles>
+        <Title description="Book Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.BookAppointment.Button.LabelText">
+      <Titles>
+        <Title description="Book Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.BookAppointment.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Manually book an appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.BookAppointment.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Book Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Cancel.Button.Alt">
+      <Titles>
+        <Title description="Cancel Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Cancel.Button.LabelText">
+      <Titles>
+        <Title description="Cancel" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Cancel.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Cancels the assessment." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Cancel.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Cancel Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Complete.Button.Alt">
+      <Titles>
+        <Title description="Complete Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Complete.Button.LabelText">
+      <Titles>
+        <Title description="Complete" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Complete.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Complete the assessment." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.Complete.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Complete Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.CreateReferralTask.Button.Alt">
+      <Titles>
+        <Title description="Create Referral Task" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.CreateReferralTask.Button.LabelText">
+      <Titles>
+        <Title description="Create Referral Task" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.CreateReferralTask.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Create a referral task for Approval Required." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_assessment.CreateReferralTask.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Create Referral Task" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

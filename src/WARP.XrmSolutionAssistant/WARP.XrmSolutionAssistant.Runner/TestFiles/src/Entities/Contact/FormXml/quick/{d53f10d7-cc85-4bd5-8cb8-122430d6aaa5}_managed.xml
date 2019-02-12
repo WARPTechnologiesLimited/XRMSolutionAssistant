@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systemform>
+  <formid>{d53f10d7-cc85-4bd5-8cb8-122430d6aaa5}</formid>
+  <IntroducedVersion>0.1.0.24</IntroducedVersion>
+  <FormPresentation>1</FormPresentation>
+  <FormActivationState>1</FormActivationState>
+  <form maxWidth="400">
+    <tabs>
+      <tab id="{005afa59-a975-45a8-9490-692fd35ddc66}" name="tab_1" showlabel="false">
+        <labels>
+          <label description="Tab" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{fd517548-55ba-4e01-b91b-ac1df954f3c5}" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0">
+                <labels>
+                  <label description="section" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{cbe3d080-bead-cdbe-a251-ed2e47e57303}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_region" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_region" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{5d967864-3619-8673-53ab-49cbe4825766}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_subregion" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cp_subregion" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{9d8100d7-8c8b-e890-12b9-7d8284237107}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_ninumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cp_ninumber" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{23877267-b880-41aa-9aa5-8755534c6b97}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_acrn" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cp_acrn" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{6e72ea24-10b6-8c81-56ee-104ebbb51231}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="preferredcontactmethodcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="preferredcontactmethodcode" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{c1c14dbc-aa3e-b561-b2a8-6d031b291d87}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_languagepreference" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_languagepreference" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{033e57b5-d4ca-a83e-e47d-ec2b5584e02e}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_alternativeformat" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_alternativeformat" disabled="false" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+    </tabs>
+    <DisplayConditions Order="2">
+      <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+      <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+    </DisplayConditions>
+  </form>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <LocalizedNames>
+    <LocalizedName description="Claimant Quick View" languagecode="1033" />
+  </LocalizedNames>
+</systemform>

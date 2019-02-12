@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>4200</returnedtypecode>
+  <savedqueryid>{f8d3a0d7-83ee-47b7-945c-c9463cbf380d}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="activitypointers" object="4200" jump="subject" select="1" icon="1" preview="1">
+      <row name="activitypointer" id="activityid" multiobjectidfield="activitytypecode">
+        <cell name="subject" width="250" />
+        <cell name="activitytypecode" width="110" />
+        <cell name="statecode" width="100" />
+        <cell name="prioritycode" width="100" />
+        <cell name="scheduledend" width="140" />
+        <cell name="createdby" width="100" />
+        <cell name="regardingobjectid" width="100" />
+        <cell name="instancetypecode" width="100" ishidden="1" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>2</querytype>
+  <fetchxml>
+    <fetch distinct="false" mapping="logical">
+      <entity name="activitypointer">
+        <attribute name="activitytypecode" />
+        <attribute name="subject" />
+        <attribute name="statecode" />
+        <attribute name="createdby" />
+        <attribute name="regardingobjectid" />
+        <attribute name="activityid" />
+        <attribute name="prioritycode" />
+        <attribute name="scheduledend" />
+        <attribute name="instancetypecode" />
+        <attribute name="community" />
+        <order attribute="subject" descending="false" />
+        <filter type="and">
+          <filter type="and">
+            <filter type="or">
+              <condition attribute="statecode" operator="eq" value="0" />
+              <condition attribute="statecode" operator="eq" value="3" />
+            </filter>
+            <condition attribute="isregularactivity" operator="eq" value="1" />
+            <condition attribute="activitytypecode" operator="ne" value="4401" />
+            <condition attribute="activitytypecode" operator="ne" value="4402" />
+          </filter>
+        </filter>
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>6.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Open Planning Activity Associated View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

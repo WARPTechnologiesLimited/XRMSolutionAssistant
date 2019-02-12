@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>10011</returnedtypecode>
+  <savedqueryid>{123caf93-658f-e811-a952-00224801ca18}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="10011" jump="cp_name" select="1" preview="1" icon="1">
+      <row name="result" id="cp_assessmentid">
+        <cell name="cp_name" width="150" />
+        <cell name="statuscode" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+      <entity name="cp_assessment">
+        <attribute name="cp_name" />
+        <attribute name="statuscode" />
+        <order attribute="cp_name" descending="false" />
+        <link-entity name="cp_assessmentreport" from="cp_assessment" to="cp_assessmentid" alias="ac">
+          <filter type="and">
+            <condition attribute="cp_reporttype" operator="in">
+              <value>126740008</value>
+              <value>126740009</value>
+              <value>126740010</value>
+              <value>126740007</value>
+            </condition>
+            <condition attribute="statuscode" operator="eq" value="778230004" />
+          </filter>
+        </link-entity>
+        <attribute name="cp_assessmentid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description=".ADV BA - UCB added via Assessment Report (Sent to DWP/DfC)" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

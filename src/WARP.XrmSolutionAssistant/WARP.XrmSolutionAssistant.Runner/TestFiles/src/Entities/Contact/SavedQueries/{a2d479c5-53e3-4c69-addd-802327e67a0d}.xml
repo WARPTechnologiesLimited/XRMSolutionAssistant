@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{a2d479c5-53e3-4c69-addd-802327e67a0d}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="fullname" select="1" preview="0" icon="1">
+      <row name="result" id="contactid">
+        <cell name="fullname" width="300" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        <cell name="cp_title" width="100" />
+        <cell name="customertypecode" width="100" />
+        <cell name="address1_composite" width="100" disableSorting="1" />
+        <cell name="fax" ishidden="1" width="100" />
+        <cell name="address1_name" ishidden="1" width="100" />
+        <cell name="address1_fax" ishidden="1" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>64</querytype>
+  <fetchxml>
+    <fetch version="1.0" mapping="logical">
+      <entity name="contact">
+        <attribute name="fullname" />
+        <attribute name="contactid" />
+        <attribute name="fax" />
+        <attribute name="address1_name" />
+        <attribute name="address1_fax" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <order attribute="fullname" descending="false" />
+        <attribute name="customertypecode" />
+        <attribute name="address1_composite" />
+        <attribute name="cp_title" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>5.0.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Contacts Lookup View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

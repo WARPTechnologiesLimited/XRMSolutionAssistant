@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery unmodified="1">
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>2</returnedtypecode>
+  <savedqueryid>{eda26f1e-dbcc-40ad-91f2-ff2878d1d8d8}</savedqueryid>
+  <queryapi></queryapi>
+  <layoutxml>
+    <grid name="resultset" object="2" jump="fullname" select="1" preview="1" icon="1">
+      <row name="result" id="contactid">
+        <cell name="fullname" width="150" />
+        <cell name="emailaddress1" width="150" />
+        <cell name="parentcustomerid" width="150" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>2</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical">
+      <entity name="contact">
+        <attribute name="fullname" />
+        <attribute name="emailaddress1" />
+        <attribute name="parentcustomerid" />
+        <attribute name="contactid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>6.1.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Entitlement Contacts" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

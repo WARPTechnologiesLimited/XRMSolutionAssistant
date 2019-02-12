@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<systemform>
+  <formid>{5b447d2e-c2dd-47a2-91f4-3ae527fc56d8}</formid>
+  <IntroducedVersion>0.1.3.65</IntroducedVersion>
+  <FormPresentation>1</FormPresentation>
+  <FormActivationState>1</FormActivationState>
+  <form maxWidth="400">
+    <tabs>
+      <tab id="{0cd86c72-a15a-48e1-9d2f-0b35c03a8057}" name="tabDetails" showlabel="false" locklevel="0" expanded="true">
+        <labels>
+          <label description="Details" languagecode="1033" />
+        </labels>
+        <columns>
+          <column width="100%">
+            <sections>
+              <section id="{762a4420-3452-4926-bfbc-218a38240562}" name="sectionDetails" columns="1" showlabel="false" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="140" celllabelalignment="Left" celllabelposition="Left">
+                <labels>
+                  <label description="Details" languagecode="1033" />
+                </labels>
+                <rows>
+                  <row>
+                    <cell id="{41b15dbc-01e7-d7ba-aeb9-50a829d5e594}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_starttime" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="cp_starttime" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{bab55773-1681-898e-b533-519606cac537}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{4aa13ee6-aa6e-0158-1451-4baa3db34ed3}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="Location" languagecode="1033" />
+                      </labels>
+                      <control id="cp_locationofassessment" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="cp_locationofassessment" disabled="false" uniqueid="{077d9e72-2a3b-8518-d7bb-5458502d7595}" />
+                    </cell>
+                  </row>
+                  <row>
+                    <cell id="{85c64ce3-3258-92de-e876-6c2a0a06c068}" showlabel="true" locklevel="0">
+                      <labels>
+                        <label description="" languagecode="1033" />
+                      </labels>
+                      <control id="cp_healthprofessional" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="cp_healthprofessional" disabled="false" />
+                    </cell>
+                  </row>
+                </rows>
+              </section>
+            </sections>
+          </column>
+        </columns>
+      </tab>
+    </tabs>
+    <DisplayConditions Order="2">
+      <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+      <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+    </DisplayConditions>
+  </form>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <LocalizedNames>
+    <LocalizedName description="Quick View for Referral Closure Review" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Quick View for use on the Referral Closure Review form." languagecode="1033" />
+  </Descriptions>
+</systemform>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>10012</returnedtypecode>
+  <savedqueryid>{e09206d4-dfda-43fa-9482-217a5d9e86ff}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="10012" jump="cp_name" select="1" icon="1" preview="1">
+      <row name="result" id="cp_assessmentprocesstypeid">
+        <cell name="cp_name" width="300" />
+        <cell name="cp_actiontype" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>1</querytype>
+  <fetchxml>
+    <fetch version="1.0" mapping="logical">
+      <entity name="cp_assessmentprocesstype">
+        <attribute name="cp_assessmentprocesstypeid" />
+        <attribute name="cp_name" />
+        <attribute name="cp_actiontype" />
+        <order attribute="cp_name" descending="false" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>201710.1629</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Assessment Process Type Advanced Find View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

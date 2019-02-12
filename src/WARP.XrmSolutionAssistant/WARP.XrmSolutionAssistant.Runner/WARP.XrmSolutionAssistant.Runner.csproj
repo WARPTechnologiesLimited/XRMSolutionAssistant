@@ -15,7 +15,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-	<PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,7 +27,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-	<PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\..\..\lib\WARP.XrmBuildTools.Runner\</OutputPath>
@@ -61,6 +61,9 @@
     </AdditionalFiles>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestFiles\Extract.bat" />
+    <None Include="TestFiles\WARPSolutionAssistantTest.zip" />
+    <None Include="TestFiles\WARPSolutionAssistantTest_managed.zip" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\..\lib\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
@@ -71,6 +74,353 @@
       <Project>{659b212b-9532-4aef-a32a-abae33ea1607}</Project>
       <Name>WARP.XrmSolutionAssistant</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\appointmentBook\{fcfde47d-4951-4fea-bcd9-e5b5d673911f}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\card\{656cc4ad-235b-495b-8cb9-6174f9b09321}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\main\{230cd27c-0ce0-4b52-9fe5-d7a5ed94ba4e}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\main\{3a7d8836-e2d7-4bc3-919b-cc86a8d9688a}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\main\{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\main\{f5af0c79-97db-4c3f-8d7e-62b53d9062d4}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\quick\{4cd45c5d-29b3-48d3-997a-2bc3f8beeba8}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\quickCreate\{5895e983-598b-4834-80f9-68a4e9f4f744}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\FormXml\taskBasedForm\{7f58467b-ab43-447c-ab95-29deea3b1e35}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\Entity.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Appointment\RibbonDiff.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\main\{9886ead0-4fcc-4747-9a18-08e7a9a6de71}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\main\{9886ead0-4fcc-4747-9a18-08e7a9a6de71}_managed.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\main\{e160d172-172b-4619-9799-81bb007ecc54}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\main\{e1ec2c0c-1744-42fa-a346-fb8237357d0f}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\main\{e3b6ddb7-8df0-4410-ac7b-fd32e5053d38}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\quick\{95192c4e-f96e-4771-b10a-e6421c908533}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\quick\{d228d73e-e56e-48b3-ab95-0a06b1397b03}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\FormXml\quickCreate\{aa7c154f-e2f8-45db-b780-a9a8a96332fe}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\Entity.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\Lead\RibbonDiff.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\FormXml\card\{5c0107f2-4941-44d3-98f5-811ed74bee05}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\FormXml\card\{5c0107f2-4941-44d3-98f5-811ed74bee05}_managed.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\FormXml\main\{7e0fd2b3-b19c-427d-b592-97e2c8a44deb}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\FormXml\main\{7e0fd2b3-b19c-427d-b592-97e2c8a44deb}_managed.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\FormXml\quick\{f5dff38c-b55c-436d-9175-e8c8305f1a4f}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\FormXml\quick\{f5dff38c-b55c-436d-9175-e8c8305f1a4f}_managed.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{531b6b97-9e31-4991-9261-f5bda7f2093d}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{54480a41-04cb-4314-bdf2-901d5cea4abd}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{57d91c40-eb41-4191-84c8-2cb7ed4b8ac6}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{713ee52c-39b4-4889-870b-852632b93205}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{7b932685-9320-e911-a972-002248010929}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{b8f8132b-4997-47b4-8418-33b6c4e733d7}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\SavedQueries\{d04b4c4a-523e-484f-9e0c-522ec4e49af5}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\Entity.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Entities\warp_customentity\RibbonDiff.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\InteractionCentricDashboards\{9a14ebb4-143e-e711-80e1-00155d871bb4}.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\OptionSets\warp_warpoptionset.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\BusinessUnit.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\Lead.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreement.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementbookingdate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementbookingincident.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementbookingproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementbookingservice.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementbookingservicetask.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementbookingsetup.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementinvoicedate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementinvoiceproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_agreementinvoicesetup.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_bookingalertstatus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_bookingrule.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_bookingtimestamp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_customerasset.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_fieldservicesetting.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_incidenttypecharacteristic.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_incidenttypeproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_incidenttypeservice.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_inventoryadjustment.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_inventoryadjustmentproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_inventoryjournal.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_inventorytransfer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_payment.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_paymentdetail.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_paymentmethod.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_paymentterm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_playbookinstance.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_PostAlbum.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_postalcode.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_productinventory.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_purchaseorder.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_purchaseorderbill.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_purchaseorderproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_purchaseorderreceipt.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_purchaseorderreceiptproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_purchaseordersubstatus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_quotebookingincident.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_quotebookingproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_quotebookingservice.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_quotebookingservicetask.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_resourceterritory.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rma.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rmaproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rmareceipt.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rmareceiptproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rmasubstatus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rtv.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rtvproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_rtvsubstatus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_shipvia.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_systemuserschedulersetting.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_timegroup.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_timegroupdetail.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_timeoffrequest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_warehouse.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workorder.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workordercharacteristic.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workorderincident.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workorderproduct.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workorderresourcerestriction.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workorderservice.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\msdyn_workorderservicetask.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\Owner.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\SystemUser.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\Team.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\TransactionCurrency.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships\warp_customentity.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Customizations.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Relationships.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Other\Solution.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Workflows\AssessmentReport_StatusReasonOnChange-F52199D2-C682-417B-8D94-42E1A7AB8E45.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Workflows\TestWorkflow-F7EEE4C8-A4A8-4EB6-883A-D14C61686C3D.xaml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\Extracted\Workflows\TestWorkflow-F7EEE4C8-A4A8-4EB6-883A-D14C61686C3D.xaml.data.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\SolutionPackager.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

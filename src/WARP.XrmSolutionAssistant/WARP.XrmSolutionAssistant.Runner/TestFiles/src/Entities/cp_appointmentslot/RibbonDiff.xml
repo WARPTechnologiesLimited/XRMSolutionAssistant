@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml>
+  <CustomActions>
+    <CustomAction Id="cp.cp_appointmentslot.BookProvisionalAssessment.Button.CustomAction" Location="Mscrm.Form.cp_appointmentslot.MainTab.Save.Controls._children" Sequence="47">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_appointmentslot.BookProvisionalAssessment.Button.Alt" Command="cp.cp_appointmentslot.BookProvisionalAssessment.Command" Id="cp.cp_appointmentslot.BookProvisionalAssessment.Button" Image16by16="$webresource:cp_/images/assessment16.png" LabelText="$LocLabels:cp.cp_appointmentslot.BookProvisionalAssessment.Button.LabelText" Sequence="47" TemplateAlias="o2" ToolTipTitle="$LocLabels:cp.cp_appointmentslot.BookProvisionalAssessment.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_appointmentslot.BookProvisionalAssessment.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.cp_appointmentslot.Cancel.Button.CustomAction" Location="Mscrm.Form.cp_appointmentslot.MainTab.Save.Controls._children" Sequence="65">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_appointmentslot.Cancel.Button.Alt" Command="cp.cp_appointmentslot.Cancel.Command" Id="cp.cp_appointmentslot.Cancel.Button" Image16by16="$webresource:cp_/images/cancel16.png" LabelText="$LocLabels:cp.cp_appointmentslot.Cancel.Button.LabelText" Sequence="65" TemplateAlias="o2" ToolTipTitle="$LocLabels:cp.cp_appointmentslot.Cancel.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_appointmentslot.Cancel.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="cp.cp_appointmentslot.Complete.Button.CustomAction" Location="Mscrm.Form.cp_appointmentslot.MainTab.Save.Controls._children" Sequence="43">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:cp.cp_appointmentslot.Complete.Button.Alt" Command="cp.cp_appointmentslot.Complete.Command" Id="cp.cp_appointmentslot.Complete.Button" Image16by16="$webresource:cp_/images/checkMark16.png" LabelText="$LocLabels:cp.cp_appointmentslot.Complete.Button.LabelText" Sequence="43" TemplateAlias="o2" ToolTipTitle="$LocLabels:cp.cp_appointmentslot.Complete.Button.ToolTipTitle" ToolTipDescription="$LocLabels:cp.cp_appointmentslot.Complete.Button.ToolTipDescription" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="cp.Mscrm.Form.cp_appointmentslot.Activate.Hide" Location="Mscrm.Form.cp_appointmentslot.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.Form.cp_appointmentslot.Deactivate.Hide" Location="Mscrm.Form.cp_appointmentslot.Deactivate" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.cp_appointmentslot.Activate.Hide" Location="Mscrm.HomepageGrid.cp_appointmentslot.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.HomepageGrid.cp_appointmentslot.Deactivate.Hide" Location="Mscrm.HomepageGrid.cp_appointmentslot.Deactivate" />
+    <HideCustomAction HideActionId="cp.Mscrm.SubGrid.cp_appointmentslot.Activate.Hide" Location="Mscrm.SubGrid.cp_appointmentslot.Activate" />
+    <HideCustomAction HideActionId="cp.Mscrm.SubGrid.cp_appointmentslot.Deactivate.Hide" Location="Mscrm.SubGrid.cp_appointmentslot.Deactivate" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="cp.cp_appointmentslot.BookProvisionalAssessment.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="cp.cp_appointmentslot.WriteOnly.DisplayRule" />
+        <DisplayRule Id="cp.cp_appointmentslot.IsBookable.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AppointmentSlotForm.bookProvisionalAssessment" Library="$webresource:cp_/scripts/appointmentSlotForm.js" />
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.cp_appointmentslot.Cancel.Command">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AppointmentSlotForm.cancelAppointment" Library="$webresource:cp_/scripts/appointmentSlotForm.js" />
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="cp.cp_appointmentslot.Complete.Command">
+      <EnableRules>
+        <EnableRule Id="cp.cp_appointmentslot.CompleteCustom.EnableRule" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="cp.cp_appointmentslot.WriteOnly.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Phoenix.AppointmentSlotForm.complete" Library="$webresource:cp_/scripts/appointmentSlotForm.js" />
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="cp.cp_appointmentslot.Booked.DisplayRule">
+        <ValueRule Field="statuscode" Value="778230003" />
+      </DisplayRule>
+      <DisplayRule Id="cp.cp_appointmentslot.IsBookable.DisplayRule">
+        <ValueRule Field="statuscode" Value="778230002" Default="false" />
+      </DisplayRule>
+      <DisplayRule Id="cp.cp_appointmentslot.WriteOnly.DisplayRule">
+        <FormStateRule State="Existing" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="cp.cp_appointmentslot.CompleteCustom.EnableRule">
+        <CustomRule FunctionName="Phoenix.AppointmentSlotForm.showCompleteButton" Library="$webresource:cp_/scripts/appointmentSlotForm.js" Default="false" />
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="cp.cp_appointmentslot.BookProvisionalAssessment.Button.Alt">
+      <Titles>
+        <Title description="Book Provisional Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.BookProvisionalAssessment.Button.LabelText">
+      <Titles>
+        <Title description="Book Provisional Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.BookProvisionalAssessment.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Book the related provisional assessment." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.BookProvisionalAssessment.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Book Provisional Assessment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Cancel.Button.Alt">
+      <Titles>
+        <Title description="Cancel Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Cancel.Button.LabelText">
+      <Titles>
+        <Title description="Cancel" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Cancel.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Cancel the appointment." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Cancel.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Cancel Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Complete.Button.Alt">
+      <Titles>
+        <Title description="Complete Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Complete.Button.LabelText">
+      <Titles>
+        <Title description="Complete Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Complete.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Complete the appointment." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="cp.cp_appointmentslot.Complete.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Complete Appointment" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

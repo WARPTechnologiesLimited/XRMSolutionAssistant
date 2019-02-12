@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>1</isdefault>
+  <returnedtypecode>10011</returnedtypecode>
+  <savedqueryid>{dc302458-eb0e-43f0-8f7d-94188654e4af}</savedqueryid>
+  <layoutxml>
+    <grid name="" object="10011" jump="cp_name" select="1" icon="1" preview="0">
+      <row name="cp_assessment" id="cp_assessmentid">
+        <cell name="cp_name" width="300" />
+        <cell name="statuscode" width="100" />
+        <cell name="a_d7a28799cd5ce811a94f00224801ca18.cp_referraltype" width="100" disableSorting="1" />
+        <cell name="cp_assessmentprocesstype" width="100" />
+        <cell name="cp_claimantfullname" width="100" />
+        <cell name="cp_assessmenttool" width="100" />
+        <cell name="cp_referral" width="100" />
+        <cell name="cp_sladuedate" width="100" />
+        <cell name="createdon" width="125" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>64</querytype>
+  <fetchxml>
+    <fetch version="1.0" mapping="logical">
+      <entity name="cp_assessment">
+        <attribute name="cp_assessmentid" />
+        <attribute name="cp_name" />
+        <attribute name="createdon" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <order attribute="cp_name" descending="true" />
+        <link-entity alias="a_d7a28799cd5ce811a94f00224801ca18" name="cp_referral" from="cp_referralid" to="cp_referral" link-type="outer" visible="false">
+          <attribute name="cp_referraltype" />
+        </link-entity>
+        <attribute name="statuscode" />
+        <attribute name="cp_sladuedate" />
+        <attribute name="cp_referral" />
+        <attribute name="cp_claimantfullname" />
+        <attribute name="cp_assessmenttool" />
+        <attribute name="cp_assessmentprocesstype" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>201710.1629</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Assessment Lookup View" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

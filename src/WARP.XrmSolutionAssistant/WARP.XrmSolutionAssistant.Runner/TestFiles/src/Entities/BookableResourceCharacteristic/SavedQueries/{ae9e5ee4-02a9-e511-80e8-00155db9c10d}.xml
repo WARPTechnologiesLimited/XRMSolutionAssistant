@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>1148</returnedtypecode>
+  <savedqueryid>{ae9e5ee4-02a9-e511-80e8-00155db9c10d}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="1148" jump="name" select="1" preview="1" icon="1">
+      <row name="result" id="bookableresourcecharacteristicid">
+        <cell name="characteristic" width="150" />
+        <cell name="a_97eb94e2bab8e51180d800155dbdd410.characteristictype" width="100" disableSorting="1" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical">
+      <entity name="bookableresourcecharacteristic">
+        <order attribute="characteristic" descending="false" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+        <attribute name="characteristic" />
+        <link-entity alias="a_97eb94e2bab8e51180d800155dbdd410" name="characteristic" from="characteristicid" to="characteristic" link-type="outer" visible="false">
+          <attribute name="characteristictype" />
+        </link-entity>
+        <attribute name="bookableresourcecharacteristicid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>8.1.0.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Resource Characteristics" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>

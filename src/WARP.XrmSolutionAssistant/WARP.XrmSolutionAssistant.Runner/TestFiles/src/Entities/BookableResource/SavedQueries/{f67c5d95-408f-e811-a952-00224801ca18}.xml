@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedquery>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <isquickfindquery>0</isquickfindquery>
+  <isprivate>0</isprivate>
+  <isdefault>0</isdefault>
+  <returnedtypecode>1150</returnedtypecode>
+  <savedqueryid>{f67c5d95-408f-e811-a952-00224801ca18}</savedqueryid>
+  <layoutxml>
+    <grid name="resultset" object="1150" jump="name" select="1" preview="1" icon="1">
+      <row name="result" id="bookableresourceid">
+        <cell name="name" width="150" />
+        <cell name="createdon" width="100" />
+        <cell name="cp_sapvendornumber" width="100" />
+        <cell name="cp_manager" width="100" />
+        <cell name="modifiedon" width="100" />
+      </row>
+    </grid>
+  </layoutxml>
+  <querytype>0</querytype>
+  <fetchxml>
+    <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+      <entity name="bookableresource">
+        <attribute name="name" />
+        <order attribute="name" descending="false" />
+        <filter type="and">
+          <condition attribute="cp_managername" operator="like" value="Leaver Leaver%" />
+          <condition attribute="statecode" operator="eq" value="0" />
+          <condition attribute="cp_typeofemployment" operator="eq" value="2" />
+          <condition attribute="cp_sapvendornumber" operator="not-null" />
+        </filter>
+        <attribute name="cp_sapvendornumber" />
+        <attribute name="modifiedon" />
+        <attribute name="cp_manager" />
+        <attribute name="createdon" />
+        <attribute name="bookableresourceid" />
+      </entity>
+    </fetch>
+  </fetchxml>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <LocalizedNames>
+    <LocalizedName description="Finance - Leavers with SAP Number" languagecode="1033" />
+  </LocalizedNames>
+</savedquery>
