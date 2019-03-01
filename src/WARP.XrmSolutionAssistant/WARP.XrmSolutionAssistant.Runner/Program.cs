@@ -34,8 +34,7 @@ namespace WARP.XrmSolutionAssistant.Runner
             solutionVersionResetter.Execute();
 
             Console.WriteLine();
-            Console.WriteLine("Complete. Press any key to close.");
-            Console.ReadKey();
+            Console.WriteLine("Complete");
         }
     }
 }
