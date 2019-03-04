@@ -35,8 +35,6 @@ namespace WARP.XrmSolutionAssistant
 
         private readonly string solutionRootDirectory;
 
-        private readonly bool resetIntroducedInVersion;
-
         /// <summary>The fixed Object Type Codes for CRM</summary>
         private readonly Dictionary<string, int> fixedObjTypeCodes;
 
@@ -44,11 +42,9 @@ namespace WARP.XrmSolutionAssistant
         /// Initializes a new instance of the <see cref="SolutionEntityAligner"/> class.
         /// </summary>
         /// <param name="solutionRootDirectory">Path to the directory containing the extracted solution.</param>
-        /// <param name="resetIntroducedInVersion">Flag to set the IntroducedInVersion tag to 0.0.0.0</param>
-        public SolutionEntityAligner(string solutionRootDirectory, bool resetIntroducedInVersion = true)
+        public SolutionEntityAligner(string solutionRootDirectory)
         {
             this.solutionRootDirectory = solutionRootDirectory;
-            this.resetIntroducedInVersion = resetIntroducedInVersion;
             this.fixedObjTypeCodes = GetObjectTypeCodes();
         }
 
@@ -118,16 +114,6 @@ namespace WARP.XrmSolutionAssistant
 
                         UpdateSavedQueryFilesObjectCode(Path.Combine(entityDir, "SavedQueries"), currentTypeCode, newTypeCode.ToString());
                     }
-
-                    // Reset Introduced version number to 0 to prevent changes being marked
-                    if (this.resetIntroducedInVersion)
-                    {
-                        xmlContents = Regex.Replace(xmlContents, @"<IntroducedVersion>\d+.\d+.\d+.\d+</IntroducedVersion>", "<IntroducedVersion>0.0.0.0</IntroducedVersion>");
-                    }
-
-                    var tw = new StreamWriter(xmlPath, false, new UTF8Encoding(true));
-                    tw.Write(xmlContents);
-                    tw.Close();
                 }
 
                 Logger.Info("Finished.");

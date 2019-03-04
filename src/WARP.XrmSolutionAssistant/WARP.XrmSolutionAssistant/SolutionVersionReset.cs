@@ -15,6 +15,11 @@ namespace WARP.XrmSolutionAssistant
     /// </summary>
     public class SolutionVersionReset
     {
+        /// <summary>
+        /// Stores the name of the entity XML file
+        /// </summary>
+        private const string EntityFileName = "Entity.xml";
+
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private readonly string solutionRootDirectory;
 
@@ -42,12 +47,40 @@ namespace WARP.XrmSolutionAssistant
 
             try
             {
+                // deal with the entities
+                var entitiesDir = Path.Combine(this.solutionRootDirectory, "Entities");
+
+                Logger.Debug("Checking directory {0}...", entitiesDir);
+                foreach (var entityDir in Directory.GetDirectories(entitiesDir))
+                {
+                    var xmlPath = Path.Combine(entityDir, EntityFileName);
+
+                    if (!File.Exists(xmlPath))
+                    {
+                        // Empty directory left over from removed entity, skip
+                        Logger.Trace("Empty directory. Skipping: {0}", entitiesDir);
+                        continue;
+                    }
+
+                    var xmlContents = File.ReadAllText(xmlPath);
+
+                    // Reset Introduced version number to 0 to prevent changes being marked
+                    xmlContents = Regex.Replace(xmlContents, @"<IntroducedVersion>.+/IntroducedVersion>", "<IntroducedVersion>0.0.0.0</IntroducedVersion>");
+
+                    var ew = new StreamWriter(xmlPath, false, new UTF8Encoding(true));
+                    ew.Write(xmlContents);
+                    ew.Close();
+
+                    Logger.Info("Reset Entity Introduced Version to 0.0.0.0: {0}", new DirectoryInfo(entityDir).Name);
+                }
+
+                // deal with the solution.xml file
                 var otherDir = Path.Combine(this.solutionRootDirectory, "Other");
 
                 var solutionXmlPath = Path.Combine(otherDir, "solution.xml");
                 var solutionXmlContents = File.ReadAllText(solutionXmlPath);
 
-                // Reset Introduced version number to 0 to prevent changes being marked
+                // Reset Version number to 0 to prevent changes being marked
                 solutionXmlContents = Regex.Replace(solutionXmlContents, @"<Version>.+</Version>", "<Version>0.0.0.0</Version>");
 
                 // Write the updated solution file
