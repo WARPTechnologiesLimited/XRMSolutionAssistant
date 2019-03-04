@@ -5,7 +5,6 @@ A .NET Standard assembly offering tooling to assist with the management of expor
 - Version Reset
 - Workflow Guid Aligner
 - XML Sorter
-- Runner
 ### Overview
 #### Entity OTC Aligner
 For versions of CRM < 9, each custom entity was assigned a code upon installation. Between different CRM Organizations, this value would be different. Even if sourced from the same solution. This tool allows the code to be set to a known value when extracted.
@@ -30,7 +29,7 @@ All the tools work on a folder structure that has been created from the *Solutio
 
 Alongside the assembly is ``settings.json`` that provides information to some of the tooling.
 ### Runner
-Runner is an example console application which may be used for a quick-start and utilises all the tools in the assistant assembly.
+Runner is an example console application which may be used for a quick-start and implements all the tools in the assistant assembly.
 ```
 WARP.XrmSolutionAssistant.Runner.exe /<folder>
 ```
