@@ -21,7 +21,7 @@ Under some circumstances, the xaml for a Workflow may contain ``<Variable x:...>
 Due to the nature of the *SolutionPackager.exe* tool, nested elements may be written in an unpredictable order and create noise in source control change. This tool will alpha order those elements to maintain consistency across different extracts.
 ## Usage
 ### General
-All the tools are contained in the *WARP.XrmSolutionAssistant.dll* which may be called from a console application. *Runner* is a console application with every tool implemented.
+All the tools are contained in the *WARP.XrmSolutionAssistant.dll* which may be called from a console application.
 
 All the tools are in the `` WARP.SolutionAssistant `` namespace.
 
