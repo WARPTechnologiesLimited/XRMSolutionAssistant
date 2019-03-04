@@ -48,7 +48,7 @@ namespace WARP.XrmSolutionAssistant
                 var solutionXmlContents = File.ReadAllText(solutionXmlPath);
 
                 // Reset Introduced version number to 0 to prevent changes being marked
-                solutionXmlContents = Regex.Replace(solutionXmlContents, @"<Version>\d+.\d+.\d+.\d+</Version>", "<Version>0.0.0.0</Version>");
+                solutionXmlContents = Regex.Replace(solutionXmlContents, @"<Version>.+</Version>", "<Version>0.0.0.0</Version>");
 
                 // Write the updated solution file
                 var sw = new StreamWriter(solutionXmlPath, false, new UTF8Encoding(true));
