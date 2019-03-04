@@ -1,5 +1,5 @@
 # XRMSolutionAssistant
-A .NET Standard assembly offering tooling to help with the management of exported Microsoft CRM solution files and reducing noise in a multi-developer, branched environment.
+A .NET Standard assembly offering tooling to assist with the management of exported Microsoft CRM solution files and reducing noise in a multi-developer, branched environment.
 ## Available Tools
 - Entity OTC Aligner
 - Version Reset
