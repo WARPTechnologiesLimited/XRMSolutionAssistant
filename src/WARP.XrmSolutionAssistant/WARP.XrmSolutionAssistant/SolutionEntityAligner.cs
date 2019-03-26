@@ -1,5 +1,5 @@
 ﻿// <copyright file="SolutionEntityAligner.cs" company="WARP Technologies Limited">
-// Copyright © WARP Technologies Limited
+// Released by WARP for use by the CRM development community.
 // </copyright>
 
 namespace WARP.XrmSolutionAssistant

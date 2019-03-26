@@ -6,8 +6,16 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Tests\WARP.XrmSolutionAssistant.Tests.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Tests\WARP.XrmSolutionAssistant.Tests.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Content Include="..\..\stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
 
   <ItemGroup>

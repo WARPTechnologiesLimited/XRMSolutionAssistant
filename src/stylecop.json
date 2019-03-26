@@ -9,7 +9,7 @@
   "settings": {
     "documentationRules": {
       "companyName": "WARP Technologies Limited",
-      "copyrightText": "Copyright © {companyName}",
+      "copyrightText": "Released by WARP for use by the CRM development community.",
       "documentationCulture": "en-GB"
     },
     "namingRules": {

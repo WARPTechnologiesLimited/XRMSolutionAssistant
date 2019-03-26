@@ -5,8 +5,16 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Console\WARP.XrmSolutionAssistant.Console.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Console\WARP.XrmSolutionAssistant.Console.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Content Include="..\..\stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
 
   <ItemGroup>
