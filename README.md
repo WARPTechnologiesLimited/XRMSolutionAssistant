@@ -28,10 +28,10 @@ All the tools are in the `` WARP.SolutionAssistant `` namespace.
 All the tools work on a folder structure that has been created from the *SolutionPackager.exe* console application from the CRM SDK.
 
 Alongside the assembly is ``settings.json`` that provides information to some of the tooling.
-### Runner
-Runner is an example console application which may be used for a quick-start and implements all the tools in the assistant assembly.
+### XRMSolutionAssistant.Console
+XRMSolutionAssistant.Console is an example .NET Core console application which may be used for a quick-start and implements all the tools in the assistant assembly.
 ```
-WARP.XrmSolutionAssistant.Runner.exe /<folder>
+WARP.XRMSolutionAssistant.Console.exe /<folder>
 ```
 Where *folder* is the path to the extracted solution file.
 
