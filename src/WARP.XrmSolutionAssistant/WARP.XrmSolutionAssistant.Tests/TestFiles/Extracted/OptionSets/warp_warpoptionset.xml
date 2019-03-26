@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="warp_warpoptionset" localizedName="WARP Option Set">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>0.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="WARP Option Set" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="390520000" ExternalValue="" Color="#0000ff">
+      <labels>
+        <label description="البند 3" languagecode="1025" />
+        <label description="Item 3" languagecode="1033" />
+        <label description="Objet 3" languagecode="1036" />
+        <label description="第3项" languagecode="3076" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="390520001" ExternalValue="" Color="#0000ff">
+      <labels>
+        <label description="البند 2" languagecode="1025" />
+        <label description="Item 2" languagecode="1033" />
+        <label description="Objet 2" languagecode="1036" />
+        <label description="第2项" languagecode="3076" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="390520002" ExternalValue="" Color="#0000ff">
+      <labels>
+        <label description="البند 1" languagecode="1025" />
+        <label description="Item 1" languagecode="1033" />
+        <label description="Objet 1" languagecode="1036" />
+        <label description="第1项" languagecode="3076" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

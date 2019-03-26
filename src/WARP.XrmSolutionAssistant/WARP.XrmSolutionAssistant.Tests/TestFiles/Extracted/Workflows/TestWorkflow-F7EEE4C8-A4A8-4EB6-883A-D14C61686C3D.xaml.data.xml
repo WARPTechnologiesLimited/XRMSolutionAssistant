@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{f7eee4c8-a4a8-4eb6-883a-d14c61686c3d}" Name="Test Workflow">
+  <XamlFileName>/Workflows/TestWorkflow-F7EEE4C8-A4A8-4EB6-883A-D14C61686C3D.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>0</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnUpdateAttributeList>warp_optionset,warp_name,warp_currency,warp_lead,warp_boolean</TriggerOnUpdateAttributeList>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>1</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>0.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <PrimaryEntity>warp_customentity</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Test Workflow" />
+  </LocalizedNames>
+</Workflow>

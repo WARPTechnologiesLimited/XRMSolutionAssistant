@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms>
+  <systemform unmodified="1">
+    <formid>{4cd45c5d-29b3-48d3-997a-2bc3f8beeba8}</formid>
+    <IntroducedVersion>8.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="{57f22b37-faf3-4a2b-b4a3-09e91aedc5de}" name="tab_1" showlabel="false">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="{813bb7c4-c5ff-4c5a-b6ab-c01101d7bbd8}" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0">
+                  <labels>
+                    <label description="تفاصيل الموعد" languagecode="1025" />
+                    <label description="APPOINTMENT DETAILS" languagecode="1033" />
+                    <label description="DÉTAILS DU RENDEZ-VOUS" languagecode="1036" />
+                    <label description="約會詳細資料" languagecode="3076" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b30b0e78-1a14-1824-d916-c11c41b7531a}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="الموضوع" languagecode="1025" />
+                          <label description="Subject" languagecode="1033" />
+                          <label description="Sujet" languagecode="1036" />
+                          <label description="主題" languagecode="3076" />
+                        </labels>
+                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{71597dc7-db34-0336-6b46-03419d910174}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="الحضور المطلوبون" languagecode="1025" />
+                          <label description="Required Attendees" languagecode="1033" />
+                          <label description="Participants obligatoires" languagecode="1036" />
+                          <label description="必要的與會者" languagecode="3076" />
+                        </labels>
+                        <control id="requiredattendees" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="requiredattendees" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4ac67a81-bb43-d274-069e-d3aa48ac4001}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="وقت البدء" languagecode="1025" />
+                          <label description="Start Time" languagecode="1033" />
+                          <label description="Heure de début" languagecode="1036" />
+                          <label description="開始時間" languagecode="3076" />
+                        </labels>
+                        <control id="scheduledstart" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledstart" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0774774d-4d35-bb09-91e8-6304220ba5ba}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="وقت الانتهاء" languagecode="1025" />
+                          <label description="End Time" languagecode="1033" />
+                          <label description="Heure de fin" languagecode="1036" />
+                          <label description="結束時間" languagecode="3076" />
+                        </labels>
+                        <control id="scheduledend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledend" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9a68993d-5c2b-7304-a741-c0aa97ab3728}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="بخصوص" languagecode="1025" />
+                          <label description="Regarding" languagecode="1033" />
+                          <label description="Concernant" languagecode="1036" />
+                          <label description="相關" languagecode="3076" />
+                        </labels>
+                        <control id="regardingobjectid" classid="{F3015350-44A2-4aa0-97B5-00166532B5E9}" datafieldname="regardingobjectid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b4e682a0-6298-22e6-5ae5-244274090c52}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="الموقف" languagecode="1025" />
+                          <label description="Status" languagecode="1033" />
+                          <label description="Statut" languagecode="1036" />
+                          <label description="狀態" languagecode="3076" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_1_section_2" showlabel="true" showbar="false" locklevel="0" id="{ddb4284c-394e-db00-4d27-4e0461608c5d}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="الوصف" languagecode="1025" />
+                    <label description="DESCRIPTION" languagecode="1033" />
+                    <label description="DESCRIPTION" languagecode="1036" />
+                    <label description="描述" languagecode="3076" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{44548c24-8e8e-41ea-13d4-81de04963449}" showlabel="false" locklevel="0" rowspan="4">
+                        <labels>
+                          <label description="الوصف" languagecode="1025" />
+                          <label description="Description" languagecode="1033" />
+                          <label description="Description" languagecode="1036" />
+                          <label description="描述" languagecode="3076" />
+                        </labels>
+                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_1_section_4" showlabel="true" showbar="false" locklevel="0" id="{6c0a7099-7b8a-4ade-c2a0-4928d50e0ba0}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="تفاصيل أخرى" languagecode="1025" />
+                    <label description="OTHER DETAILS" languagecode="1033" />
+                    <label description="AUTRES DÉTAILS" languagecode="1036" />
+                    <label description="其他詳細資料" languagecode="3076" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{56640e52-70ee-49ed-a093-a0ab575763e4}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="الأولوية" languagecode="1025" />
+                          <label description="Priority" languagecode="1033" />
+                          <label description="Priorité" languagecode="1036" />
+                          <label description="優先順序" languagecode="3076" />
+                        </labels>
+                        <control id="prioritycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="prioritycode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c984500c-556a-ae43-2c87-97e78ec03abb}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="وقت الانتهاء" languagecode="1025" />
+                          <label description="End Time" languagecode="1033" />
+                          <label description="Heure de fin" languagecode="1036" />
+                          <label description="結束時間" languagecode="3076" />
+                        </labels>
+                        <control id="scheduledend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledend" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d926dea4-6519-522a-53b5-d45977e7d2a5}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="المدة" languagecode="1025" />
+                          <label description="Duration" languagecode="1033" />
+                          <label description="Durée" languagecode="1036" />
+                          <label description="期間" languagecode="3076" />
+                        </labels>
+                        <control id="scheduleddurationminutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="scheduleddurationminutes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ede52572-d950-db24-23d2-b8b903588096}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="المالك" languagecode="1025" />
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                          <label description="負責人" languagecode="3076" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="لوحة الموعد المرجعية" languagecode="1025" />
+      <LocalizedName description="Appointment Reference Panel" languagecode="1033" />
+      <LocalizedName description="Volet de référence du rendez-vous" languagecode="1036" />
+      <LocalizedName description="約會參照面板" languagecode="3076" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="نموذج يعرض لوحة الموعد المرجعية." languagecode="1025" />
+      <Description description="A form that displays Reference Panel of Appointment." languagecode="1033" />
+      <Description description="Formulaire affichant le volet de référence du rendez-vous." languagecode="1036" />
+      <Description description="顯示約會參照面板的表單。" languagecode="3076" />
+    </Descriptions>
+  </systemform>
+</forms>

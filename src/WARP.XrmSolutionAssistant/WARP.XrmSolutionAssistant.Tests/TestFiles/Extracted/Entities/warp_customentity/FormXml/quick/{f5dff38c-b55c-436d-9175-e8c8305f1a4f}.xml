@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms>
+  <systemform>
+    <formid>{f5dff38c-b55c-436d-9175-e8c8305f1a4f}</formid>
+    <IntroducedVersion>0.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{fce1baba-40f3-471e-97a2-6ed42c8c7874}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{55575120-9fa7-4eb7-a445-44268156fdaf}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5f763cbf-214d-4831-8b1a-eb63c162fc6c}">
+                        <labels>
+                          <label description="اسم" languagecode="1025" />
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                          <label description="名称" languagecode="3076" />
+                        </labels>
+                        <control id="warp_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="warp_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{52616458-7958-4ff0-8d19-8bf04e5c6085}">
+                        <labels>
+                          <label description="صاحب" languagecode="1025" />
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                          <label description="所有者" languagecode="3076" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

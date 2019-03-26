@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries>
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{d04b4c4a-523e-484f-9e0c-522ec4e49af5}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="warp_name" select="1" icon="1" preview="1">
+        <row name="result" id="warp_customentityid">
+          <cell name="warp_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="warp_customentity">
+          <attribute name="warp_customentityid" />
+          <attribute name="warp_name" />
+          <attribute name="createdon" />
+          <order attribute="warp_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>0.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="الكيانات المخصصة غير النشطة" languagecode="1025" />
+      <LocalizedName description="Inactive Custom Entities" languagecode="1033" />
+      <LocalizedName description="Entités personnalisées inactives" languagecode="1036" />
+      <LocalizedName description="不活跃的自定义实体" languagecode="3076" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

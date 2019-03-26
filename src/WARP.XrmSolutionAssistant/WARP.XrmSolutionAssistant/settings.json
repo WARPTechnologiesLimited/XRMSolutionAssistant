@@ -1,0 +1,8 @@
+﻿{
+  "EntityTypeCodes": [
+    {
+      "EntityLogicalName": "warp_customentity",
+      "TypeCode": 10145
+    }
+  ]
+}
