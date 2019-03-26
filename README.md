@@ -74,3 +74,4 @@ Implementation
             var sorter = new SolutionXmlSorter(folder);
             sorter.Execute();
 ```
+=======
