@@ -2,7 +2,7 @@
 // Copyright © WARP Technologies Limited
 // </copyright>
 
-namespace WARP.XrmSolutionAssistant.Runner
+namespace WARP.XrmSolutionAssistant.Console
 {
     using System;
 
