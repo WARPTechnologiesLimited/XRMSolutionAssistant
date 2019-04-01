@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant", "WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.csproj", "{659B212B-9532-4AEF-A32A-ABAE33EA1607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant.Core", "WARP.XrmSolutionAssistant.Core\WARP.XrmSolutionAssistant.Core.csproj", "{659B212B-9532-4AEF-A32A-ABAE33EA1607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WARP.XrmSolutionAssistant.Console", "WARP.XrmSolutionAssistant.Console\WARP.XrmSolutionAssistant.Console.csproj", "{E4386041-BBD2-4B64-9960-83D6EA28E290}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant.Console", "WARP.XrmSolutionAssistant.Console\WARP.XrmSolutionAssistant.Console.csproj", "{E4386041-BBD2-4B64-9960-83D6EA28E290}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WARP.XrmSolutionAssistant.Tests", "WARP.XrmSolutionAssistant.Tests\WARP.XrmSolutionAssistant.Tests.csproj", "{B0A743CE-DCD6-4E77-91AF-576D9F3FC898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant.Tests", "WARP.XrmSolutionAssistant.Tests\WARP.XrmSolutionAssistant.Tests.csproj", "{B0A743CE-DCD6-4E77-91AF-576D9F3FC898}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

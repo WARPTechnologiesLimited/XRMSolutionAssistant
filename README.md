@@ -1,4 +1,5 @@
 # XRMSolutionAssistant
+[![Build Status](https://warpuk.visualstudio.com/XRMSolutionAssistant/_apis/build/status/XRMSolutionAssistant-CI?branchName=master)](https://warpuk.visualstudio.com/XRMSolutionAssistant/_build/latest?definitionId=72&branchName=master)
 A .NET Standard assembly offering tooling to assist with the management of exported Microsoft CRM solution files and reducing noise in a multi-developer, branched environment.
 ## Available Tools
 - Entity OTC Aligner
@@ -29,11 +30,11 @@ All the tools work on a folder structure that has been created from the *Solutio
 
 Alongside the assembly is ``settings.json`` that provides information to some of the tooling.
 ### XRMSolutionAssistant.Console
-XRMSolutionAssistant.Console is an example .NET Core console application which may be used for a quick-start and implements all the tools in the assistant assembly.
+XRMSolutionAssistant.Console is an example .NET Core console application which may be used for a quick-start and implements all the tools in the assistant assembly. The full stand-alone Windows 64-bit build is available from the releases tab [here](https://github.com/WARPTechnologiesLimited/XRMSolutionAssistant/releases). Usage:
 ```
 WARP.XRMSolutionAssistant.Console.exe /<folder>
 ```
-Where *folder* is the path to the extracted solution file.
+Where *folder* is the path to the extracted solution file. Folder can be either a full or relative path.
 
 ### Entity OTC Aligner
 Modify your ``settings.json`` to contain a collection of ``EntityTypeCodes`` as below:

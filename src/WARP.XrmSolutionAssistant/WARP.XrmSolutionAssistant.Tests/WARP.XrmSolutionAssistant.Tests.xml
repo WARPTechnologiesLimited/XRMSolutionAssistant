@@ -4,12 +4,12 @@
         <name>WARP.XrmSolutionAssistant.Tests</name>
     </assembly>
     <members>
-        <member name="T:WARP.XrmSolutionAssistant.Tests.UnitTest1">
+        <member name="T:WARP.XrmSolutionAssistant.Core.Tests.UnitTest1">
             <summary>
             Placeholder class for future tests.
             </summary>
         </member>
-        <member name="M:WARP.XrmSolutionAssistant.Tests.UnitTest1.TestMethod1">
+        <member name="M:WARP.XrmSolutionAssistant.Core.Tests.UnitTest1.TestMethod1">
             <summary>
             Placeholder method for future tests.
             </summary>

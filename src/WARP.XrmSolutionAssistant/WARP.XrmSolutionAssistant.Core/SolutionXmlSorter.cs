@@ -4,7 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace WARP.XrmSolutionAssistant
+namespace WARP.XrmSolutionAssistant.Core
 {
     using System;
     using System.IO;
@@ -12,7 +12,7 @@ namespace WARP.XrmSolutionAssistant
     using System.Xml.Linq;
 
     using NLog;
-    using WARP.XrmSolutionAssistant.Workers;
+    using WARP.XrmSolutionAssistant.Core.Workers;
 
     /// <summary>
     /// Sorts extracted Dynamics CRM solution files.

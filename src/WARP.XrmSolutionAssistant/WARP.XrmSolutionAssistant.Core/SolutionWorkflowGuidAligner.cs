@@ -2,7 +2,7 @@
 // Released by WARP for use by the CRM development community.
 // </copyright>
 
-namespace WARP.XrmSolutionAssistant
+namespace WARP.XrmSolutionAssistant.Core
 {
     using System;
     using System.IO;

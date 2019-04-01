@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.csproj" />
+    <ProjectReference Include="..\WARP.XrmSolutionAssistant.Core\WARP.XrmSolutionAssistant.Core.csproj" />
   </ItemGroup>
 
 </Project>

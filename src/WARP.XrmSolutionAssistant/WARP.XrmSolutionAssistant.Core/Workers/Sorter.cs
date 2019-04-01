@@ -3,7 +3,7 @@
 // </copyright>
 
 // ReSharper disable PossibleMultipleEnumeration
-namespace WARP.XrmSolutionAssistant.Workers
+namespace WARP.XrmSolutionAssistant.Core.Workers
 {
     using System.Linq;
     using System.Xml.Linq;
