@@ -1,5 +1,6 @@
 # XRMSolutionAssistant
 [![Build Status](https://warpuk.visualstudio.com/XRMSolutionAssistant/_apis/build/status/XRMSolutionAssistant-CI?branchName=master)](https://warpuk.visualstudio.com/XRMSolutionAssistant/_build/latest?definitionId=72&branchName=master)
+
 A .NET Standard assembly offering tooling to assist with the management of exported Microsoft CRM solution files and reducing noise in a multi-developer, branched environment.
 ## Available Tools
 - Entity OTC Aligner
