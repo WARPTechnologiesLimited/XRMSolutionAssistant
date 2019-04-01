@@ -2,7 +2,7 @@
 // Released by WARP for use by the CRM development community.
 // </copyright>
 
-namespace WARP.XrmSolutionAssistant.Models
+namespace WARP.XrmSolutionAssistant.Core.Models
 {
     using System.Collections.Generic;
 

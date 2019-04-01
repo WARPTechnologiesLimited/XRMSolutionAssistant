@@ -2,7 +2,7 @@
 // Released by WARP for use by the CRM development community.
 // </copyright>
 
-namespace WARP.XrmSolutionAssistant
+namespace WARP.XrmSolutionAssistant.Core
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace WARP.XrmSolutionAssistant
 
     using NLog;
 
-    using WARP.XrmSolutionAssistant.Models;
+    using WARP.XrmSolutionAssistant.Core.Models;
 
     /// <summary>
     /// A class to align the entity type codes into a consistent format.

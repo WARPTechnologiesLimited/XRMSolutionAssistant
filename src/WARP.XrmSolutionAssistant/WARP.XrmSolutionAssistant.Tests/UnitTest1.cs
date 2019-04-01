@@ -4,7 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace WARP.XrmSolutionAssistant.Tests
+namespace WARP.XrmSolutionAssistant.Core.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
