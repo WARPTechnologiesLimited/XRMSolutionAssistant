@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant.Core", "WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Core.csproj", "{659B212B-9532-4AEF-A32A-ABAE33EA1607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant.Core", "WARP.XrmSolutionAssistant.Core\WARP.XrmSolutionAssistant.Core.csproj", "{659B212B-9532-4AEF-A32A-ABAE33EA1607}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WARP.XrmSolutionAssistant.Console", "WARP.XrmSolutionAssistant.Console\WARP.XrmSolutionAssistant.Console.csproj", "{E4386041-BBD2-4B64-9960-83D6EA28E290}"
 EndProject
