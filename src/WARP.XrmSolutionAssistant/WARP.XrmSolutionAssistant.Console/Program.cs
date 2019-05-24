@@ -25,14 +25,20 @@ namespace WARP.XrmSolutionAssistant.Core.Console
             }
 
             var excludes = new string[0];
-            if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json")))
+            var executingDirectory = AppContext.BaseDirectory;
+            Console.WriteLine($"Looking for appsettings.json in: {executingDirectory}");
+            if (File.Exists(Path.Combine(executingDirectory, "appsettings.json")))
             {
-                var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", true, true);
+                var builder = new ConfigurationBuilder().SetBasePath(executingDirectory).AddJsonFile("appsettings.json", true, true);
 
                 var configurationRoot = builder.Build();
                 var config = configurationRoot.Get<Config>();
                 excludes = config.Excludes;
                 Console.WriteLine($"Excludes: {string.Join(",", excludes)}");
+            }
+            else
+            {
+                Console.WriteLine($"No appsettings.json file found. Executing all assistants.");
             }
 
             var rootDirectory = args[0];
