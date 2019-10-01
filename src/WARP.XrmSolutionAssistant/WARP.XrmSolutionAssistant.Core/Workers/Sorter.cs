@@ -64,6 +64,7 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             const string RequiredName = "Required";
             const string DependentName = "Dependent";
             const string KeyName = "key";
+            const string SortBy = "displayName";
 
             var md = doc.Descendants(MissingDependencyLabel);
             if (!md.Any())
@@ -72,8 +73,8 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             }
 
             var missingDependenciesContainer = md.FirstOrDefault()?.Parent;
-            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(KeyName)?.Value)
-                .ThenBy(d => d.Element(DependentName)?.Attribute(KeyName)?.Value).ToList();
+            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(SortBy)?.Value)
+                .ThenBy(d => d.Element(DependentName)?.Attribute(SortBy)?.Value).ToList();
             md.Remove();
             foreach (var dependencyElement in sorted)
             {
