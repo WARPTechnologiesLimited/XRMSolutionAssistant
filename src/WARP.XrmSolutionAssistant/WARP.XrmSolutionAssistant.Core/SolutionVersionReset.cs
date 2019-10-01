@@ -51,8 +51,9 @@ namespace WARP.XrmSolutionAssistant.Core
                 var entitiesDir = Path.Combine(this.solutionRootDirectory, "Entities");
 
                 Logger.Debug("Checking directory {0}...", entitiesDir);
-                foreach (var entityDir in Directory.GetDirectories(entitiesDir))
+                foreach (var entityDir in Directory.GetDirectories(entitiesDir, "*", SearchOption.AllDirectories))
                 {
+                    // Entity.xml
                     var xmlPath = Path.Combine(entityDir, EntityFileName);
 
                     if (!File.Exists(xmlPath))
@@ -62,14 +63,7 @@ namespace WARP.XrmSolutionAssistant.Core
                         continue;
                     }
 
-                    var xmlContents = File.ReadAllText(xmlPath);
-
-                    // Reset Introduced version number to 0 to prevent changes being marked
-                    xmlContents = Regex.Replace(xmlContents, @"<IntroducedVersion>.+/IntroducedVersion>", "<IntroducedVersion>0.0.0.0</IntroducedVersion>");
-
-                    var ew = new StreamWriter(xmlPath, false, new UTF8Encoding(true));
-                    ew.Write(xmlContents);
-                    ew.Close();
+                    ProcessDirectory(entityDir);
 
                     Logger.Info("Reset Entity Introduced Version to 0.0.0.0: {0}", new DirectoryInfo(entityDir).Name);
                 }
@@ -98,6 +92,35 @@ namespace WARP.XrmSolutionAssistant.Core
             {
                 Logger.Info("Leaving {0}", Logger.Name);
             }
+        }
+
+        private static void ProcessDirectory(string targetDirectory)
+        {
+            // Process the list of files found in the directory.
+            var fileEntries = Directory.GetFiles(targetDirectory, "*.xml", SearchOption.TopDirectoryOnly);
+            foreach (var fileName in fileEntries)
+            {
+                ProcessFile(fileName);
+            }
+
+            // Recurse into subdirectories of this directory.
+            var subdirectoryEntries = Directory.GetDirectories(targetDirectory);
+            foreach (var subdirectory in subdirectoryEntries)
+            {
+                ProcessDirectory(subdirectory);
+            }
+        }
+
+        private static void ProcessFile(string path)
+        {
+            var xmlContents = File.ReadAllText(path);
+
+            // Reset Introduced version number to 0 to prevent changes being marked
+            xmlContents = Regex.Replace(xmlContents, @"<IntroducedVersion>.+/IntroducedVersion>", "<IntroducedVersion>0.0.0.0</IntroducedVersion>");
+
+            var ew = new StreamWriter(path, false, new UTF8Encoding(true));
+            ew.Write(xmlContents);
+            ew.Close();
         }
     }
 }
