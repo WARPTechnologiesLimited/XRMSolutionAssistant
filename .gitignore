@@ -243,3 +243,5 @@ src/Hurricane.Reports/Hurricane.Reports.SEMR/ReportPackage.cs
 /src/lib/WARP.Data/WARP.Data.AssessmentClient.dll
 /src/lib/WARP.Data/WARP.Data.AssessmentClient.dll.config
 /output/
+/src/WARP.XrmSolutionAssistant/WARP.XrmSolutionAssistant.Core/Properties/launchSettings.json
+/src/WARP.XrmSolutionAssistant/WARP.XrmSolutionAssistant.Console/Properties/launchSettings.json
