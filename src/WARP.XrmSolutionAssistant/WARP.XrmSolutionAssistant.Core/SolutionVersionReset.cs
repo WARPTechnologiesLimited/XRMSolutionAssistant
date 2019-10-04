@@ -33,7 +33,7 @@ namespace WARP.XrmSolutionAssistant.Core
         }
 
         /// <summary>
-        /// Executes the logic to replace workflow Guids with a consistent value.
+        /// Executes the logic to reset the Version of a solution to 0.0.0.0 to reduce source control noise.
         /// </summary>
         public void Execute()
         {
@@ -63,6 +63,7 @@ namespace WARP.XrmSolutionAssistant.Core
                         continue;
                     }
 
+                    // process the files in the subdirectories.
                     ProcessDirectory(entityDir);
 
                     Logger.Info("Reset Entity Introduced Version to 0.0.0.0: {0}", new DirectoryInfo(entityDir).Name);
