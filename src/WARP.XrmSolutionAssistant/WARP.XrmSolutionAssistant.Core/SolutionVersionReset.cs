@@ -47,35 +47,16 @@ namespace WARP.XrmSolutionAssistant.Core
 
             try
             {
-                // deal with the entities
-                var entitiesDir = Path.Combine(this.solutionRootDirectory, "Entities");
+                // traverse the root directory.
+                ProcessDirectory(this.solutionRootDirectory);
 
-                Logger.Debug("Checking directory {0}...", entitiesDir);
-                foreach (var entityDir in Directory.GetDirectories(entitiesDir, "*", SearchOption.AllDirectories))
-                {
-                    // Entity.xml
-                    var xmlPath = Path.Combine(entityDir, EntityFileName);
-
-                    if (!File.Exists(xmlPath))
-                    {
-                        // Empty directory left over from removed entity, skip
-                        Logger.Trace("Empty directory. Skipping: {0}", entitiesDir);
-                        continue;
-                    }
-
-                    // process the files in the subdirectories.
-                    ProcessDirectory(entityDir);
-
-                    Logger.Info("Reset Entity Introduced Version to 0.0.0.0: {0}", new DirectoryInfo(entityDir).Name);
-                }
-
-                // deal with the solution.xml file
+                // deal with the solution.xml file with different Version tag.
                 var otherDir = Path.Combine(this.solutionRootDirectory, "Other");
 
                 var solutionXmlPath = Path.Combine(otherDir, "solution.xml");
                 var solutionXmlContents = File.ReadAllText(solutionXmlPath);
 
-                // Reset Version number to 0 to prevent changes being marked
+                // Reset Version number to 0 to prevent changes being marked.
                 solutionXmlContents = Regex.Replace(solutionXmlContents, @"<Version>.+</Version>", "<Version>0.0.0.0</Version>");
 
                 // Write the updated solution file
