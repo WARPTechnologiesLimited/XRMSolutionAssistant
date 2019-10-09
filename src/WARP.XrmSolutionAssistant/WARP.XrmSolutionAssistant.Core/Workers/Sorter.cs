@@ -114,7 +114,7 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
                 }
             }
 
-            var newList = dependencyList.OrderBy(d => d.Value[AttributeType]).ToList();
+            var newList = dependencyList.OrderBy(d => d.Value[AttributeSchemaName]).ThenBy(d => d.Value[AttributeDisplayName]).ThenBy(d => d.Value[AttributeSolutionId]).ThenBy(d => d.Value[AttributeId]).ToList();
 
             var map = new Dictionary<string, string>();
 
