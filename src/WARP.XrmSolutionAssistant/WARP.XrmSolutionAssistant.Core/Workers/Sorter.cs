@@ -63,7 +63,6 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             const string MissingDependencyLabel = "MissingDependency";
             const string RequiredName = "Required";
             const string DependentName = "Dependent";
-            const string KeyName = "key";
             const string SortBy = "displayName";
 
             var md = doc.Descendants(MissingDependencyLabel);
