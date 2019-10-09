@@ -5,7 +5,10 @@
 // ReSharper disable PossibleMultipleEnumeration
 namespace WARP.XrmSolutionAssistant.Core.Workers
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
+    using System.Runtime.CompilerServices;
     using System.Xml.Linq;
 
     /// <summary>
@@ -65,6 +68,17 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             const string DependentName = "Dependent";
             const string SortBy = "displayName";
 
+            const string AttributeKey = "key";
+            const string AttributeType = "type";
+            const string AttributeSchemaName = "schemaName";
+            const string AttributeDisplayName = "displayName";
+            const string AttributeParentSchemaName = "parentSchemaName";
+            const string AttributeParentDisplayName = "parentDisplayName";
+            const string AttributeId = "id";
+            const string AttributeSolutionId = "solutionId";
+            const string AttributeNewKey = "assistant_newKey";
+
+
             var md = doc.Descendants(MissingDependencyLabel);
             if (!md.Any())
             {
@@ -72,8 +86,57 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             }
 
             var missingDependenciesContainer = md.FirstOrDefault()?.Parent;
-            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(SortBy)?.Value)
-                .ThenBy(d => d.Element(DependentName)?.Attribute(SortBy)?.Value).ToList();
+
+            var dependencyList = new Dictionary<int, Dictionary<string, string>>();
+
+            foreach (var dependency in md)
+            {
+                foreach (var line in dependency.Elements())
+                {
+                    if (int.TryParse(line.Attribute(AttributeKey)?.Value, out var key) == false)
+                    {
+                        throw new Exception("Unable to read key for dependency.");
+                    }
+
+                    if (!dependencyList.ContainsKey(key))
+                    {
+                        dependencyList.Add(key, new Dictionary<string, string> { { AttributeKey, null }, { AttributeType, null }, { AttributeSchemaName, null }, { AttributeDisplayName, null }, { AttributeParentSchemaName, null }, { AttributeParentDisplayName, null }, { AttributeId, null }, { AttributeSolutionId, null }, { AttributeNewKey, null } });
+                    }
+
+                    foreach (var xAttribute in line.Attributes())
+                    {
+                        var kvp = new KeyValuePair<string, string>(xAttribute.Name.LocalName, xAttribute.Value);
+                        if (dependencyList[key].ContainsKey(kvp.Key))
+                        {
+                            dependencyList[key][kvp.Key] = kvp.Value;
+                        }
+                    }
+                }
+            }
+
+            var newList = dependencyList.OrderBy(d => d.Value[AttributeType]).ToList();
+
+            var map = new Dictionary<string, string>();
+
+            var count = 1;
+            foreach (var keyValuePair in newList)
+            {
+                map.Add(keyValuePair.Key.ToString(), count.ToString());
+                keyValuePair.Value[AttributeNewKey] = count.ToString();
+                Console.WriteLine($"Old key = {keyValuePair.Key} New Key = {keyValuePair.Value[AttributeNewKey]}");
+                count++;
+            }
+
+            // Update the keys
+            foreach (var dependency in md)
+            {
+                foreach (var line in dependency.Elements())
+                {
+                    line.Attribute(AttributeKey).Value = map[line.Attribute(AttributeKey).Value];
+                }
+            }
+
+            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(AttributeKey)?.Value).ThenBy(d => d.Element(DependentName)?.Attribute(AttributeKey)?.Value).ToList();
             md.Remove();
             foreach (var dependencyElement in sorted)
             {
