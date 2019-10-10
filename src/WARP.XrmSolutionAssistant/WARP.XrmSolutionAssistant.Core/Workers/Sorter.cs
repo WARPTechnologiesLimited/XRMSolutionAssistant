@@ -5,8 +5,13 @@
 // ReSharper disable PossibleMultipleEnumeration
 namespace WARP.XrmSolutionAssistant.Core.Workers
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
+    using System.Runtime.CompilerServices;
     using System.Xml.Linq;
+
+    using WARP.XrmSolutionAssistant.Core.Comparers;
 
     /// <summary>
     /// Class for managing the sorting of an XML Document.
@@ -56,6 +61,7 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
 
         /// <summary>
         /// Sorts the MissingDependencies block by Required key then Dependent key.
+        /// This is achieved by ordering all the dependencies in a predictable way then reassign keys based on this order.
         /// </summary>
         /// <param name="doc">The document to sort.</param>
         private static void SortMissingDependencies(XContainer doc)
@@ -63,7 +69,16 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             const string MissingDependencyLabel = "MissingDependency";
             const string RequiredName = "Required";
             const string DependentName = "Dependent";
-            const string SortBy = "displayName";
+
+            const string AttributeKey = "key";
+            const string AttributeType = "type";
+            const string AttributeSchemaName = "schemaName";
+            const string AttributeDisplayName = "displayName";
+            const string AttributeParentSchemaName = "parentSchemaName";
+            const string AttributeParentDisplayName = "parentDisplayName";
+            const string AttributeId = "id";
+            const string AttributeSolutionId = "solutionId";
+            const string AttributeNewKey = "assistant_newKey";
 
             var md = doc.Descendants(MissingDependencyLabel);
             if (!md.Any())
@@ -72,8 +87,70 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             }
 
             var missingDependenciesContainer = md.FirstOrDefault()?.Parent;
-            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(SortBy)?.Value)
-                .ThenBy(d => d.Element(DependentName)?.Attribute(SortBy)?.Value).ToList();
+
+            var dependencyList = new Dictionary<int, Dictionary<string, string>>();
+
+            foreach (var dependency in md)
+            {
+                foreach (var line in dependency.Elements())
+                {
+                    if (int.TryParse(line.Attribute(AttributeKey)?.Value, out var key) == false)
+                    {
+                        throw new Exception("Unable to read key for dependency line.");
+                    }
+
+                    // Add each dependency to the list and create the key value pairs for the expected attributes. These will be populated as lines are found ensuring the elements exist for all items when sorting.
+                    if (!dependencyList.ContainsKey(key))
+                    {
+                        dependencyList.Add(key, new Dictionary<string, string> { { AttributeKey, null }, { AttributeType, null }, { AttributeSchemaName, null }, { AttributeDisplayName, null }, { AttributeParentSchemaName, null }, { AttributeParentDisplayName, null }, { AttributeId, null }, { AttributeSolutionId, null }, { AttributeNewKey, null } });
+                    }
+
+                    // Go through each line and fill the dependency list and attributes
+                    foreach (var xAttribute in line.Attributes())
+                    {
+                        var kvp = new KeyValuePair<string, string>(xAttribute.Name.LocalName, xAttribute.Value);
+                        if (dependencyList[key].ContainsKey(kvp.Key))
+                        {
+                            dependencyList[key][kvp.Key] = kvp.Value;
+                        }
+                    }
+                }
+            }
+
+            // Sort the dependencies now we have all the required information
+            var sortedDependencies = dependencyList.OrderBy(d => d.Value[AttributeSchemaName])
+                .ThenBy(d => d.Value[AttributeDisplayName])
+                .ThenBy(d => d.Value[AttributeSolutionId])
+                .ThenBy(d => d.Value[AttributeId])
+                .ThenBy(d => d.Value[AttributeParentSchemaName])
+                .ThenBy(d => d.Value[AttributeParentDisplayName])
+                .ThenBy(d => d.Value[AttributeType]).ToList();
+
+            // Add the new keys for each dependency
+            var count = 1;
+            foreach (var keyValuePair in sortedDependencies)
+            {
+                int.TryParse(keyValuePair.Value[AttributeKey], out var key);
+                dependencyList[key][AttributeNewKey] = count.ToString();
+                count++;
+            }
+
+            // Update the keys in the XML
+            foreach (var dependency in md)
+            {
+                foreach (var line in dependency.Elements())
+                {
+                    if (line.Attribute(AttributeKey)?.Value != null && int.TryParse(line.Attribute(AttributeKey).Value, out var key))
+                    {
+                        line.Attribute(AttributeKey).Value = dependencyList[key][AttributeNewKey];
+                    }
+                }
+            }
+
+            // Order the XML by the new keys
+            var comparer = new StringNumericCompare();
+            var sorted = md.OrderBy(r => r.Element(RequiredName)?.Attribute(AttributeKey)?.Value, comparer).ThenBy(d => d.Element(DependentName)?.Attribute(AttributeKey)?.Value, comparer).ToList();
+
             md.Remove();
             foreach (var dependencyElement in sorted)
             {
