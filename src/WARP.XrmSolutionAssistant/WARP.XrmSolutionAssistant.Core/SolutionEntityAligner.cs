@@ -131,21 +131,7 @@ namespace WARP.XrmSolutionAssistant.Core
         private static Dictionary<string, int> GetObjectTypeCodes()
         {
             Logger.Debug("Getting OTC list.");
-            const string ConfigFileName = "settings.json";
-
-            // Walk the tree to find the variables files
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-            var filePath = Path.Combine(path, ConfigFileName);
-
-            if (!File.Exists(filePath))
-            {
-                throw new FileNotFoundException($"Cannot locate file for reading entity type codes: {filePath}");
-            }
-
-            var json = File.ReadAllText(filePath);
-
-            var settings = JsonConvert.DeserializeObject<SettingsWrapper>(json);
+            var settings = Workers.Settings.GetSettings();
             var typeCodes = settings.EntityTypeCodes;
 
             return typeCodes.ToDictionary(tc => tc.EntityLogicalName, tc => tc.TypeCode);
