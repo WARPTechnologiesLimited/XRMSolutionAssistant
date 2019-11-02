@@ -15,5 +15,10 @@ namespace WARP.XrmSolutionAssistant.Core.Models
         /// Gets or sets the collection of entity type codes.
         /// </summary>
         public List<EntityTypeCode> EntityTypeCodes { get; set; }
+
+        /// <summary>
+        /// Gets or sets solutionVersionReset.
+        /// </summary>
+        public SolutionVersionReset SolutionVersionReset { get; set; }
     }
 }
