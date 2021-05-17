@@ -56,24 +56,27 @@ namespace WARP.XrmSolutionAssistant.Core
                 var alreadySorted = 0;
                 var files = Directory.EnumerateFiles(this.solutionRootDirectory, "*.xml", SearchOption.AllDirectories);
                 files.ToList().ForEach(
-                    filename =>
+                    filePath =>
                         {
-                            var doc = XDocument.Load(filename);
+                            var fileName = Path.GetFileName(filePath);
+                            Logger.Trace("Processing file: {0}", filePath);
+                            var doc = XDocument.Load(filePath);
                             if (doc.Root != null && doc.Root.Name == "Workflow")
                             {
-                                Logger.Info("Skipping workflow: {0}", filename);
+                                Logger.Info("Skipping workflow: {0}", fileName);
                             }
                             else
                             {
                                 sorter.Sort(doc, out var hasChanged);
                                 if (hasChanged)
                                 {
-                                    Logger.Info("File sorted: {0}", filename);
-                                    doc.Save(filename);
+                                    Logger.Info("File sorted: {0}", fileName);
+                                    doc.Save(filePath);
                                     sorted++;
                                 }
                                 else
                                 {
+                                    Logger.Trace("Already sorted. No action: {0}", fileName);
                                     alreadySorted++;
                                 }
                             }
