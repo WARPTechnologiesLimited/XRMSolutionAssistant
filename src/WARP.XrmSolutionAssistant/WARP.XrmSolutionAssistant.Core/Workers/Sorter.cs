@@ -97,7 +97,8 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
                 {
                     if (int.TryParse(line.Attribute(AttributeKey)?.Value, out var key) == false)
                     {
-                        throw new Exception("Unable to read key for dependency line.");
+                        // MissingDependenies are of the format that does not contain keys.
+                        return;
                     }
 
                     // Add each dependency to the list and create the key value pairs for the expected attributes. These will be populated as lines are found ensuring the elements exist for all items when sorting.
