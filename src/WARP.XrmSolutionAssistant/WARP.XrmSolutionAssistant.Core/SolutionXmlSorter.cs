@@ -20,14 +20,14 @@ namespace WARP.XrmSolutionAssistant.Core
     public class SolutionXmlSorter
     {
         /// <summary>
-        /// NLog reference for this class
+        /// NLog reference for this class.
         /// </summary>
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         private readonly string solutionRootDirectory;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionXmlSorter"/> class.
+        /// Initialises a new instance of the <see cref="SolutionXmlSorter"/> class.
         /// </summary>
         /// <param name="solutionRootDirectory">The root directory for the extracted solution.</param>
         public SolutionXmlSorter(string solutionRootDirectory)

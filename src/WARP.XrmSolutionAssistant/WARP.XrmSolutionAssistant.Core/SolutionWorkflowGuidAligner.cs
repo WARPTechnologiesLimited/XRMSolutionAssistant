@@ -18,7 +18,7 @@ namespace WARP.XrmSolutionAssistant.Core
     public class SolutionWorkflowGuidAligner
     {
         /// <summary>
-        /// NLog reference for this class
+        /// NLog reference for this class.
         /// </summary>
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 

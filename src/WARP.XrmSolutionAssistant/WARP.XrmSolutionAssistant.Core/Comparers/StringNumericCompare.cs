@@ -11,15 +11,15 @@ namespace WARP.XrmSolutionAssistant.Core.Comparers
     using System.Globalization;
 
     /// <summary>
-    /// Comparer that compares strings which contains integers
+    /// Comparer that compares strings which contains integers.
     /// </summary>
     public class StringNumericCompare : IComparer<string>
     {
         /// <summary>
-        /// Method to determine if a object string is a number
+        /// Method to determine if a object string is a number.
         /// </summary>
-        /// <param name="value">Object to test</param>
-        /// <returns>True if numeric</returns>
+        /// <param name="value">Object to test.</param>
+        /// <returns>True if numeric.</returns>
         public static bool IsNumeric(object value)
         {
             return int.TryParse(value.ToString(), out var i);

@@ -24,22 +24,22 @@ namespace WARP.XrmSolutionAssistant.Core
     public class SolutionEntityAligner
     {
         /// <summary>
-        /// Stores the name of the entity XML file
+        /// Stores the name of the entity XML file.
         /// </summary>
         private const string EntityFileName = "Entity.xml";
 
         /// <summary>
-        /// NLog reference for this class
+        /// NLog reference for this class.
         /// </summary>
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         private readonly string solutionRootDirectory;
 
-        /// <summary>The fixed Object Type Codes for CRM</summary>
+        /// <summary>The fixed Object Type Codes for CRM.</summary>
         private readonly Dictionary<string, int> fixedObjTypeCodes;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionEntityAligner"/> class.
+        /// Initialises a new instance of the <see cref="SolutionEntityAligner"/> class.
         /// </summary>
         /// <param name="solutionRootDirectory">Path to the directory containing the extracted solution.</param>
         public SolutionEntityAligner(string solutionRootDirectory)
