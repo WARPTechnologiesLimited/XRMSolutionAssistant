@@ -12,7 +12,7 @@ namespace WARP.XrmSolutionAssistant.Core.Console
     using Microsoft.Extensions.Configuration;
 
     /// <summary>
-    /// Application to tidy CRM changes pulled down from CRM in a multi developer environment
+    /// Application to tidy CRM changes pulled down from CRM in a multi developer environment.
     /// </summary>
     public class Program
     {
@@ -74,7 +74,7 @@ namespace WARP.XrmSolutionAssistant.Core.Console
 
 #pragma warning disable SA1402 // File may only contain a single class
     /// <summary>
-    /// Container for app config items
+    /// Container for app config items.
     /// </summary>
     internal class Config
     {

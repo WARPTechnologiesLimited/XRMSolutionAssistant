@@ -18,14 +18,14 @@ namespace WARP.XrmSolutionAssistant.Core
     public class SolutionWorkflowGuidAligner
     {
         /// <summary>
-        /// NLog reference for this class
+        /// NLog reference for this class.
         /// </summary>
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         private readonly string solutionRootDirectory;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionWorkflowGuidAligner"/> class.
+        /// Initialises a new instance of the <see cref="SolutionWorkflowGuidAligner"/> class.
         /// </summary>
         /// <param name="solutionRootDirectory">Path to the directory containing the extracted solution.</param>
         public SolutionWorkflowGuidAligner(string solutionRootDirectory)
