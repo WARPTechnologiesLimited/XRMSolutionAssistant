@@ -25,7 +25,7 @@ namespace WARP.XrmSolutionAssistant.Core
         private readonly string solutionRootDirectory;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionWorkflowGuidAligner"/> class.
+        /// Initialises a new instance of the <see cref="SolutionWorkflowGuidAligner"/> class.
         /// </summary>
         /// <param name="solutionRootDirectory">Path to the directory containing the extracted solution.</param>
         public SolutionWorkflowGuidAligner(string solutionRootDirectory)
