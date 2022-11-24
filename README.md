@@ -6,6 +6,7 @@ A .NET Standard assembly offering tooling to assist with the management of expor
 - Version Reset
 - Workflow Guid Aligner
 - XML Sorter
+- Flow Connection Mapper
 ### Overview
 #### Entity OTC Aligner
 For versions of CRM < 9, each custom entity was assigned a code upon installation. Between different CRM Organizations, this value would be different. Even if sourced from the same solution. This tool allows the code to be set to a known value when extracted.
@@ -15,6 +16,8 @@ Many items within a CRM solution retain the version that they were initially ins
 Under some circumstances, the xaml for a Workflow may contain ``<Variable x:...>`` elements with Guids that are generated upon installation and therefore different every time the solution is extracted. This tool will replace those Guids with a predictable value.
 #### XML Sorter
 Due to the nature of the *SolutionPackager.exe* tool, nested elements may be written in an unpredictable order and create noise in source control change. This tool will alpha order those elements to maintain consistency across different extracts.
+#### Flow Connection Mapper
+Cloud Flows that are included in a solution will be extracted with connection references that are likely to be unique to the development environment. That results in the need to manually align the connections and turn on the Flows post solution import. This tool will allow you to define what the uniquename for an api connection should be and will update the customizations.xml and each Flow json to match, thereby matching connections that have been setup in the target.
 ## Usage
 ### General
 All the tools are contained in the *WARP.XrmSolutionAssistant.dll* which may be called from a console application.
@@ -54,7 +57,7 @@ Modify your ``settings.json`` to contain a collection of ``EntityTypeCodes`` as 
   ]
 }
 ```
-Implementation
+#### Implementation
 ```csharp
             var entityAligner = new SolutionEntityAligner(folder);
             entityAligner.Execute();
@@ -75,21 +78,82 @@ Modify your ``settings.json`` SolutionVersionReset member to reflect the version
 }
 ```
 
-Implementation
+#### Implementation
 ```csharp
             var solutionVersionResetter = new SolutionVersionReset(folder);
             solutionVersionResetter.Execute();
 ```
 ### Workflow Guid Aligner
-Implementation
+#### Implementation
 ```csharp
             var workflowGuidAligner = new SolutionWorkflowGuidAligner(folder);
             workflowGuidAligner.Execute();
 ```
 ### XML Sorter
-Implementation
+#### Implementation
 ```csharp
             var sorter = new SolutionXmlSorter(folder);
             sorter.Execute();
 ```
+
+### Flow Connection Mapper
+Modify your ``settings.json`` FlowConnectionMapper member to reflect the Connection Unique Names desired for each ApiName.
+```javascript
+{
+  "EntityTypeCodes": [
+    {
+      "EntityLogicalName": "warp_customentity",
+      "TypeCode": 10145
+    }
+  ],
+  "SolutionVersionReset": {
+    "ResetVersion": "0.0.0.0"
+  },
+  "FlowConnectionMapper": {
+    "ThrowExceptionOnUnmappedConnections": false,
+    "Maps": [
+      {
+        "ApiName": "shared_sendgrid",
+        "ConnectionUniqueName": "warp_sharedsendgrid_16999"
+      },
+      {
+        "ApiName": "shared_commondataserviceforapps",
+        "ConnectionUniqueName": "warp_sharedcommondataserviceforapps_397d8"
+      }
+    ]
+  }
+}
+```
+To determine the ApiName, export a Flow as JSON from the development environment. Look for the `connectionReferences` property. That will list the connection references used in the Flow. Take the `api.name` property.
+```javascript
+  "properties": {
+    "connectionReferences": {
+      "shared_sendgrid": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "warp_sharedsendgrid_70e47"
+        },
+        "api": {
+          "name": "shared_sendgrid"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_b8dfb"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {...
+```
+In the above example, we have two apis that we need to map; `shared_sendgrid` and `shared_commondataserviceforapps`.
+To determine the 
+Set `ThrowExceptionOnUnmappedConnections` to `true` if you wish the SolutionAssistant to stop processing when an api unknown to the `settings.json` is found in the customizations.xml file. When set to `false`, a Warning is written to the Logger.
+
+#### Implementation
+
+
 =======
