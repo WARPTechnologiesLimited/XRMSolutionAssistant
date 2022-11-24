@@ -20,5 +20,10 @@ namespace WARP.XrmSolutionAssistant.Core.Models
         /// Gets or sets solutionVersionReset.
         /// </summary>
         public SolutionVersionReset SolutionVersionReset { get; set; }
+
+        /// <summary>
+        /// Gets or sets FlowConnectionMapper.
+        /// </summary>
+        public FlowConnectionMapper FlowConnectionMapper { get; set; }
     }
 }
