@@ -89,7 +89,7 @@ namespace WARP.XrmSolutionAssistant.Core
             catch (Exception ex)
             {
                 Logger.Fatal(ex, "Unexpected error: {0}", ex);
-                throw ex;
+                throw;
             }
             finally
             {
@@ -159,13 +159,13 @@ namespace WARP.XrmSolutionAssistant.Core
                 {
                     Logger.Trace($"Replacing {rep.Key} with {rep.Value}");
                     jsonContents = jsonContents.Replace(rep.Key, rep.Value);
-
-                    // Write the updated json file.
-                    Logger.Info("Saving json file.");
-                    var sw = new StreamWriter(jsonFile, false, new UTF8Encoding(true));
-                    sw.Write(jsonContents);
-                    sw.Close();
                 }
+
+                // Write the updated json file.
+                Logger.Info("Saving json file.");
+                var sw = new StreamWriter(jsonFile, false, new UTF8Encoding(true));
+                sw.Write(jsonContents);
+                sw.Close();
             }
         }
 
