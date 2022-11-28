@@ -124,7 +124,7 @@ Modify your ``settings.json`` FlowConnectionMapper member to reflect the Connect
   }
 }
 ```
-To determine the ApiName, export a Flow as JSON from the development environment. Look for the `connectionReferences` property. That will list the connection references used in the Flow. Take the `api.name` property.
+To determine `ApiName`, export a Flow as JSON from the development environment. Look for the `connectionReferences` property. That will list the connection references used in the Flow. Take the `api.name` property.
 ```javascript
   "properties": {
     "connectionReferences": {
@@ -150,10 +150,17 @@ To determine the ApiName, export a Flow as JSON from the development environment
     "definition": {...
 ```
 In the above example, we have two apis that we need to map; `shared_sendgrid` and `shared_commondataserviceforapps`.
-To determine the 
+
+To determine the `ConnectionUniqueName`, log into PowerAutomate and locate the Connection References. The **Name** column contains the unique name of the connection. Use this value for the `ConnectionUniqueName` in the `settings.json` file. See below for example.
+
+![Target Environment Connection References](assets/targetEnvironmentConnections.png)
+
 Set `ThrowExceptionOnUnmappedConnections` to `true` if you wish the SolutionAssistant to stop processing when an api unknown to the `settings.json` is found in the customizations.xml file. When set to `false`, a Warning is written to the Logger.
 
 #### Implementation
-
+```csharp
+                var flowMapper = new SolutionFlowConnectionMapper(rootDirectory);
+                flowMapper.Execute();
+```
 
 =======
