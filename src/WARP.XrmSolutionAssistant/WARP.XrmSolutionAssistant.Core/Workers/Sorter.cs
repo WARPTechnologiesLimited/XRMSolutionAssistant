@@ -5,10 +5,8 @@
 // ReSharper disable PossibleMultipleEnumeration
 namespace WARP.XrmSolutionAssistant.Core.Workers
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Runtime.CompilerServices;
     using System.Xml.Linq;
 
     using WARP.XrmSolutionAssistant.Core.Comparers;
