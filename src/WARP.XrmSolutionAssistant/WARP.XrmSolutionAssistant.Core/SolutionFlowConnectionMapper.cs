@@ -133,9 +133,8 @@ namespace WARP.XrmSolutionAssistant.Core
                     if (connectionReferences.Any(x => x.ApiName == conref.ApiName))
                     {
                         // We have already got a connection for this Api. Tag this connection for removal.
-                        Logger.Warn($"Removing connection name [{conref.ConnectionReferenceLogicalName}] from customizations as it is a duplicate for api [{conref.ApiName}].");
+                        Logger.Warn($"Adding connection name [{conref.ConnectionReferenceLogicalName}] to the delete list as it is a duplicate for api [{conref.ApiName}].");
                         this.customizationConnectionsToDelete.Add(conref.ConnectionReferenceLogicalName);
-                        continue;
                     }
 
                     connectionReferences.Add(conref);
@@ -163,7 +162,7 @@ namespace WARP.XrmSolutionAssistant.Core
 
                 // Write the updated json file.
                 Logger.Info("Saving json file.");
-                var sw = new StreamWriter(jsonFile, false, new UTF8Encoding(true));
+                var sw = new StreamWriter(jsonFile, false, new UTF8Encoding(false));
                 sw.Write(jsonContents);
                 sw.Close();
             }
