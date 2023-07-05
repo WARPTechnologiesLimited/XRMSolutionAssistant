@@ -1,23 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-
+    <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Tests\WARP.XrmSolutionAssistant.Tests.xml</DocumentationFile>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Tests\WARP.XrmSolutionAssistant.Tests.xml</DocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.3" />
@@ -27,15 +21,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\WARP.XrmSolutionAssistant.Core\WARP.XrmSolutionAssistant.Core.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <None Update="Files\src\Workflows\TestWorkflow-F7EEE4C8-A4A8-4EB6-883A-D14C61686C3D.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
-
 </Project>
