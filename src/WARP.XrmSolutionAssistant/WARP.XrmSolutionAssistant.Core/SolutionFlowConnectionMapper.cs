@@ -218,28 +218,35 @@ namespace WARP.XrmSolutionAssistant.Core
         /// <param name="customizationsConnReferences">List of connection references extracted from the customizations file.</param>
         private void ParseCustomizationReferences(List<CustomizationsConnectionReference> customizationsConnReferences)
         {
-            // Get the maps from settings.json.
-            var maps = this.settings.FlowConnectionMapper.Maps;
-
-            // Loop through the connections in the customizations.xml file.
-            foreach (var customizationConnRef in customizationsConnReferences)
+            if (this.settings.FlowConnectionMapper != null)
             {
-                var apiName = customizationConnRef.ApiName;
+                // Get the maps from settings.json.
+                var maps = this.settings.FlowConnectionMapper.Maps;
 
-                // Get the connection name from the maps for the matching api name.
-                var targetConnName = maps.Where(x => x.ApiName == apiName).Select(x => x.ConnectionUniqueName).SingleOrDefault();
-                if (string.IsNullOrEmpty(targetConnName))
+                // Loop through the connections in the customizations.xml file.
+                foreach (var customizationConnRef in customizationsConnReferences)
                 {
-                    Logger.Warn($"No mapping for api '{apiName}'.");
-                    this.unmappedApis.Add(apiName);
-                    continue;
-                }
+                    var apiName = customizationConnRef.ApiName;
 
-                if (customizationConnRef.ConnectionReferenceLogicalName != targetConnName)
-                {
-                    Logger.Trace($"Adding {targetConnName} will replace {customizationConnRef.ConnectionReferenceLogicalName}");
-                    this.replacements.Add(customizationConnRef.ConnectionReferenceLogicalName, targetConnName);
+                    // Get the connection name from the maps for the matching api name.
+                    var targetConnName = maps.Where(x => x.ApiName == apiName).Select(x => x.ConnectionUniqueName).SingleOrDefault();
+                    if (string.IsNullOrEmpty(targetConnName))
+                    {
+                        Logger.Warn($"No mapping for api '{apiName}'.");
+                        this.unmappedApis.Add(apiName);
+                        continue;
+                    }
+
+                    if (customizationConnRef.ConnectionReferenceLogicalName != targetConnName)
+                    {
+                        Logger.Trace($"Adding {targetConnName} will replace {customizationConnRef.ConnectionReferenceLogicalName}");
+                        this.replacements.Add(customizationConnRef.ConnectionReferenceLogicalName, targetConnName);
+                    }
                 }
+            }
+            else
+            {
+                Logger.Warn("There is no Flow connetions mapping in settings.json");
             }
         }
     }
