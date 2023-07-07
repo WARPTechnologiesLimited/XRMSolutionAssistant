@@ -9,6 +9,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>C:\GitHub\XRMSolutionAssistant\src\WARP.XrmSolutionAssistant\WARP.XrmSolutionAssistant.Console\WARP.XrmSolutionAssistant.Console.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+	  <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="appsettings.json" />
   </ItemGroup>
