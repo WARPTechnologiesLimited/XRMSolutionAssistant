@@ -34,6 +34,8 @@ namespace WARP.XrmSolutionAssistant.Core.Workers
             SortContainerByAttributeValue(doc, "Titles", "LCID"); // Sitemap
             SortContainerByAttributeValue(doc, "CustomLabels", "languagecode"); // Relationships
             SortContainerByAttributeValue(doc, "AppModuleRoleMaps", "id"); // AppModule.xml
+            SortContainerByAttributeValue(doc, "AppModuleComponents", "schemaName"); // AppModule.xml
+            SortContainerByAttributeValue(doc, "AppModuleComponents", "type"); // AppModule.xml
 
             SortMissingDependencies(doc);
 
