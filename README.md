@@ -7,6 +7,7 @@ A .NET Standard assembly offering tooling to assist with the management of expor
 - Workflow Guid Aligner
 - XML Sorter
 - Flow Connection Mapper
+- Assembly And Step Version Reset
 ### Overview
 #### Entity OTC Aligner
 For versions of CRM < 9, each custom entity was assigned a code upon installation. Between different CRM Organizations, this value would be different. Even if sourced from the same solution. This tool allows the code to be set to a known value when extracted.
@@ -18,6 +19,8 @@ Under some circumstances, the xaml for a Workflow may contain ``<Variable x:...>
 Due to the nature of the *SolutionPackager.exe* tool, nested elements may be written in an unpredictable order and create noise in source control change. This tool will alpha order those elements to maintain consistency across different extracts.
 #### Flow Connection Mapper
 Cloud Flows that are included in a solution will be extracted with connection references that are likely to be unique to the development environment. That results in the need to manually align the connections and turn on the Flows post solution import. This tool will allow you to define what the uniquename for an api connection should be and will update the customizations.xml and each Flow json to match, thereby matching connections that have been setup in the target.
+#### Assembly And Step Version Reset
+When a versioned plugin assembly is installed into a dev environment, upon solution export, every Step is updated to match that version, thereby creating diff noise. This tool will allow you to normalise to a specified version everwhere a `, Version=x.x.x.x, ` string is found.
 ## Usage
 ### General
 All the tools are contained in the *WARP.XrmSolutionAssistant.dll* which may be called from a console application.
@@ -37,7 +40,7 @@ Where *folder* is the path to the extracted solution file. Folder can be either 
 To prevent a particular tool from running, locate the ``appsettings.json`` file in the same directory as the executable and edit the `Excludes` property which is a list of names of tools that you wish to exclude from running.
 ```javascript
 {
-  "Excludes": [ "SolutionWorkflowGuidAligner", "SolutionVersionReset" ]
+  "Excludes": [ "SolutionWorkflowGuidAligner", "AssemblyAndStepVersionReset" ]
 }
 ```
 
@@ -163,4 +166,27 @@ Set `ThrowExceptionOnUnmappedConnections` to `true` if you wish the SolutionAssi
                 flowMapper.Execute();
 ```
 
+### Assembly And Step Version Reset
+Modify your `settings.json` AssemblyAndStepVersionReset member to reflect the version you want your assemblies and steps to be.
+```javascript
+{
+  "EntityTypeCodes": [
+    {
+      "EntityLogicalName": "warp_customentity",
+      "TypeCode": 10145
+    }
+  ],
+  "SolutionVersionReset": {
+    "ResetVersion": "0.0.0.0"
+  },
+  "AssemblyAndStepVersionReset": {
+    "ResetVersion":  "1.0.0.0"
+  }
+}
+``` 
+#### Implementation
+```csharp
+                var assemblyVersionReset = new AssemblyAndStepVersionReset(rootDirectory);
+                assemblyVersionReset.Execute();
+```
 =======
