@@ -67,6 +67,12 @@ namespace WARP.XrmSolutionAssistant.Core.Console
                 solutionVersionResetter.Execute();
             }
 
+            if (!excludes.Contains(nameof(AssemblyAndStepVersionReset)))
+            {
+                var assemblyVersionReset = new AssemblyAndStepVersionReset(rootDirectory);
+                assemblyVersionReset.Execute();
+            }
+
             if (!excludes.Contains(nameof(SolutionFlowConnectionMapper)))
             {
                 var flowMapper = new SolutionFlowConnectionMapper(rootDirectory);

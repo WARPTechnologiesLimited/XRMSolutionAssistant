@@ -6,6 +6,9 @@
     }
   ],
   "SolutionVersionReset": {
-    "ResetVersion":  "0.0.0.0" 
-  } 
+    "ResetVersion": "0.0.0.0"
+  },
+  "AssemblyAndStepVersionReset": {
+    "ResetVersion":  "1.0.0.0"
+  }
 }
