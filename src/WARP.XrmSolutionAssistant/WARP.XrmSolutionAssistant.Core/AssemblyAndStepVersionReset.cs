@@ -86,13 +86,15 @@ namespace WARP.XrmSolutionAssistant.Core
         private static void ProcessFile(string path, string version)
         {
             var xmlContents = File.ReadAllText(path);
-
-            // Reset Assembly version number to version to prevent changes being marked.
-            xmlContents = Regex.Replace(xmlContents, @", Version=.+, ", $", Version={version}, ");
-
-            var ew = new StreamWriter(path, false, new UTF8Encoding(true));
-            ew.Write(xmlContents);
-            ew.Close();
+            var reg = new Regex(@", Version=.+\d,");
+            if (reg.IsMatch(xmlContents))
+            {
+                // Reset Assembly version number to version to prevent changes being marked.
+                xmlContents = reg.Replace(xmlContents, $", Version={version},");
+                var ew = new StreamWriter(path, false, new UTF8Encoding(true));
+                ew.Write(xmlContents);
+                ew.Close();
+            }
         }
     }
 }
