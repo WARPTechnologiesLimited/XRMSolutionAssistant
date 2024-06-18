@@ -117,27 +117,31 @@ namespace WARP.XrmSolutionAssistant.Core
         /// <returns>A List of CustomizationConnectionReferences.</returns>
         private List<CustomizationsConnectionReference> GetConnectionReferencesFromCustomizations(XElement customizationsXmlContents)
         {
-            // Get the connection references.
-            var connectionReferencesElement = customizationsXmlContents.Element(ConnectionReferences);
-            var connectionReferenceElements = from el in connectionReferencesElement.Elements(ConnectionReference) select el;
-
             var connectionReferences = new List<CustomizationsConnectionReference>();
 
-            foreach (var el in connectionReferenceElements)
-            {
-                // Deaerialize each connectionreference element into a class.
-                var ser = new XmlSerializer(typeof(CustomizationsConnectionReference));
-                var conref = (CustomizationsConnectionReference)ser.Deserialize(el.CreateReader());
-                if (conref != null)
-                {
-                    if (connectionReferences.Any(x => x.ApiName == conref.ApiName))
-                    {
-                        // We have already got a connection for this Api. Tag this connection for removal.
-                        Logger.Warn($"Adding connection name [{conref.ConnectionReferenceLogicalName}] to the delete list as it is a duplicate for api [{conref.ApiName}].");
-                        this.customizationConnectionsToDelete.Add(conref.ConnectionReferenceLogicalName);
-                    }
+            // Get the connection references.
+            var connectionReferencesElement = customizationsXmlContents.Element(ConnectionReferences);
 
-                    connectionReferences.Add(conref);
+            if (connectionReferencesElement != null)
+            {
+                var connectionReferenceElements = from el in connectionReferencesElement.Elements(ConnectionReference) select el;
+
+                foreach (var el in connectionReferenceElements)
+                {
+                    // Deaerialize each connectionreference element into a class.
+                    var ser = new XmlSerializer(typeof(CustomizationsConnectionReference));
+                    var conref = (CustomizationsConnectionReference)ser.Deserialize(el.CreateReader());
+                    if (conref != null)
+                    {
+                        if (connectionReferences.Any(x => x.ApiName == conref.ApiName))
+                        {
+                            // We have already got a connection for this Api. Tag this connection for removal.
+                            Logger.Warn($"Adding connection name [{conref.ConnectionReferenceLogicalName}] to the delete list as it is a duplicate for api [{conref.ApiName}].");
+                            this.customizationConnectionsToDelete.Add(conref.ConnectionReferenceLogicalName);
+                        }
+
+                        connectionReferences.Add(conref);
+                    }
                 }
             }
 
